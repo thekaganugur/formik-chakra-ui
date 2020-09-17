@@ -6,7 +6,26 @@ Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [React B
 
 ---
 
-## Commands
+## Progress
+
+### Components
+
+- [ x ] Button
+- [ ] ControlBox
+- [ ] Editable Text
+- [ x ] NumberInput
+- [ ] Radio
+- [ ] Select
+- [ ] Slider
+- [ ] Switch
+- [ x ] Textarea
+- [ x ] Input
+
+---
+
+## Contributions
+
+### Commands
 
 TSDX scaffolds your new library inside `/src`, and also sets up a [Parcel-based](https://parceljs.org) playground for it inside `/example`.
 
