@@ -10,7 +10,7 @@ Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [React B
 
 ### Components
 
-- [ x ] Button
+- [x] Button
 - [ ] ControlBox
 - [ ] Editable Text
 - [ x ] NumberInput
