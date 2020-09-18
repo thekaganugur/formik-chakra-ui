@@ -13,13 +13,13 @@ Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [React B
 - [x] Button
 - [ ] ControlBox
 - [ ] Editable Text
-- [ x ] NumberInput
+- [x] NumberInput
 - [ ] Radio
 - [ ] Select
 - [ ] Slider
 - [ ] Switch
-- [ x ] Textarea
-- [ x ] Input
+- [x] Textarea
+- [x] Input
 
 ---
 
