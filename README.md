@@ -14,7 +14,8 @@ Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [React B
 - [x] Checkbox
 - [ ] Editable Text
 - [x] NumberInput
-- [ ] Radio
+- [x] Radio (`<RadioGroup/>`)
+  - [x] Rendering util function/component for `<Radio/>`
 - [ ] Select
 - [ ] Slider
 - [ ] Switch
