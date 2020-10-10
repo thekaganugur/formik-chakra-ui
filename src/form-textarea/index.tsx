@@ -1,10 +1,10 @@
 import { InputProps, Textarea } from '@chakra-ui/core';
 import { useField } from 'formik';
 import React, { FC } from 'react';
-import { FormControl, FormControlProps } from '../form-control';
+import { BaseProps } from '../base-props';
+import { FormControl } from '../form-control';
 
-export type FormTextareaProps = FormControlProps &
-  InputProps<HTMLTextAreaElement>;
+export type FormTextareaProps = BaseProps & InputProps<HTMLTextAreaElement>;
 
 export const FormTextArea: FC<FormTextareaProps> = (
   props: FormTextareaProps

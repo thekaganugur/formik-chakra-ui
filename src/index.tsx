@@ -12,3 +12,4 @@ export * from './submit-button';
 export * from './form-input';
 export * from './form-textarea';
 export * from './form-number-input';
+export * from './form-checkbox';

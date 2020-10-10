@@ -2,9 +2,7 @@ import { Button, ButtonProps } from '@chakra-ui/core';
 import { useFormikContext } from 'formik';
 import React, { FC } from 'react';
 
-interface SubmitButtonProps extends ButtonProps {
-  name: string;
-}
+export type SubmitButtonProps = ButtonProps;
 
 export const SubmitButton: FC<SubmitButtonProps> = (
   props: SubmitButtonProps

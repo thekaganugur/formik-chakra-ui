@@ -1,9 +1,10 @@
 import { Input, InputProps } from '@chakra-ui/core';
 import { useField } from 'formik';
 import React, { FC } from 'react';
-import { FormControl, FormControlProps } from '../form-control';
+import { BaseProps } from '../base-props';
+import { FormControl } from '../form-control';
 
-export type FormInputProps = FormControlProps & InputProps;
+export type FormInputProps = BaseProps & InputProps;
 
 export const FormInput: FC<FormInputProps> = (props: FormInputProps) => {
   const { name, label, my, ...rest } = props;

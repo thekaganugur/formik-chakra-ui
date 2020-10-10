@@ -8,8 +8,8 @@ import { useField } from 'formik';
 import React, { FC } from 'react';
 import { BaseProps } from '../base-props';
 
-export type FormControlProps = BaseProps &
-  ChakraFormControlProps & { label: string };
+export type FormControlProps = Omit<BaseProps, 'label'> &
+  ChakraFormControlProps & { label?: string };
 
 export const FormControl: FC<FormControlProps> = (props: FormControlProps) => {
   const { children, name, label, my } = props;

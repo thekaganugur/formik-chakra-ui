@@ -11,7 +11,7 @@ Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [React B
 ### Components
 
 - [x] Button
-- [ ] ControlBox
+- [ ] Checkbox
 - [ ] Editable Text
 - [x] NumberInput
 - [ ] Radio
