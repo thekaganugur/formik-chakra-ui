@@ -32,3 +32,8 @@ Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [React B
 
 - [ ] %70 Test covarage 👀👀
 - [ ] %90 Test covarage
+
+### For the community
+
+- [ ] Better documentation
+- [ ] Codesandbox examples
