@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   ButtonGroup,
   CSSReset,
   Heading,
@@ -21,6 +20,7 @@ import {
   FormCheckboxContainer,
   FormInput,
   FormRadioGroup,
+  FormSwitch,
   FormTextArea,
   PercentComplete,
   ResetButton,
@@ -41,6 +41,7 @@ const initialValues = {
   favoriteColor: '',
   toppings: ['tuna'],
   notes: '',
+  employedd: false,
 };
 const validationSchema = Yup.object({
   firstName: Yup.string().required(),
@@ -49,6 +50,7 @@ const validationSchema = Yup.object({
   favoriteColor: Yup.string(),
   toppings: Yup.array().min(2),
   notes: Yup.string().required(),
+  employedd: Yup.boolean().equals([true]),
 });
 
 const App = () => {
@@ -80,7 +82,7 @@ const App = () => {
           onSubmit={handleSubmit}
           validationSchema={validationSchema}
         >
-          {({ handleSubmit, values, resetForm, dirty, isSubmitting }) => (
+          {({ handleSubmit, values, errors }) => (
             <Box
               as="form"
               p={6}
@@ -119,9 +121,9 @@ const App = () => {
                 </FormCheckboxArray>
               </FormCheckboxContainer>
               <FormTextArea name="notes" label="Notes" />
+              <FormSwitch name="employedd" label="Laaaaaaaaaa" />
 
               <PercentComplete />
-
               <ButtonGroup>
                 <SubmitButton>Submit</SubmitButton>
                 <ResetButton>Reset</ResetButton>
@@ -129,6 +131,8 @@ const App = () => {
 
               <Box as="pre" marginY={10}>
                 {JSON.stringify(values, null, 2)}
+                <br />
+                {JSON.stringify(errors, null, 2)}
               </Box>
             </Box>
           )}

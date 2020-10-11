@@ -18,7 +18,7 @@ Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [React B
   - [x] Rendering util function/component for `<Radio/>`
 - [ ] Select 👀
 - [ ] Slider
-- [ ] Switch 👀
+- [x] Switch
 - [x] Textarea
 - [x] Input
 
