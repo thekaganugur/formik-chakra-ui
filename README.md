@@ -26,3 +26,9 @@ Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [React B
 
 - [x] Submit button
 - [x] Reset button
+- [x] Form progress
+
+### Test
+
+- [] %70 Test covarage
+- [] %90 Test covarage

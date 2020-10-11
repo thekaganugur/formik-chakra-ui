@@ -17,3 +17,4 @@ export * from './form-radio-group';
 
 export * from './submit-button';
 export * from './reset-button';
+export * from './percent-complete';

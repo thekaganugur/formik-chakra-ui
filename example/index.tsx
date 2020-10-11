@@ -22,6 +22,7 @@ import {
   FormInput,
   FormRadioGroup,
   FormTextArea,
+  PercentComplete,
   ResetButton,
   SubmitButton,
 } from '../src';
@@ -47,7 +48,7 @@ const validationSchema = Yup.object({
   employed: Yup.boolean(),
   favoriteColor: Yup.string(),
   toppings: Yup.array().min(2),
-  notes: Yup.string(),
+  notes: Yup.string().required(),
 });
 
 const App = () => {
@@ -118,6 +119,8 @@ const App = () => {
                 </FormCheckboxArray>
               </FormCheckboxContainer>
               <FormTextArea name="notes" label="Notes" />
+
+              <PercentComplete />
 
               <ButtonGroup>
                 <SubmitButton>Submit</SubmitButton>
