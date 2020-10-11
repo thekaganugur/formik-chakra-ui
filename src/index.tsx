@@ -15,6 +15,7 @@ export * from './form-number-input';
 export * from './form-checkbox';
 export * from './form-radio-group';
 export * from './form-switch';
+export * from './form-select';
 
 export * from './submit-button';
 export * from './reset-button';
