@@ -6,6 +6,10 @@ Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [React B
 
 ---
 
+🚧🚧 This library is not production ready, yet. 🚧🚧
+
+---
+
 ## Progress
 
 ### Components
