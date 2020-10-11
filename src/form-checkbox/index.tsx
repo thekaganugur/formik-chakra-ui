@@ -11,14 +11,17 @@ export const FormCheckbox: FC<FormCheckboxProps> = (
 ) => {
   const { name, label, my, ...rest } = props;
   const [field] = useField(name);
+  const isChecked = field.value;
 
   return (
     <FormControl name={name} my={my}>
-      <Checkbox {...field} {...rest} id={name}>
+      <Checkbox id={name} isChecked={isChecked} {...field} {...rest}>
         {label}
       </Checkbox>
     </FormControl>
   );
 };
 
+export * from './checkbox-container';
+export * from './checkbox-array';
 export default FormCheckbox;

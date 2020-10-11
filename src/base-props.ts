@@ -1,4 +1,4 @@
 export interface BaseProps {
   name: string;
-  label: string;
+  label?: string;
 }
