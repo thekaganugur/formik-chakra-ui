@@ -30,5 +30,5 @@ Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [React B
 
 ### Test
 
-- [] %70 Test covarage
-- [] %90 Test covarage
+- [ ] %70 Test covarage
+- [ ] %90 Test covarage
