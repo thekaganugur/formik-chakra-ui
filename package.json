@@ -3,6 +3,7 @@
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "files": [
     "dist",
     "src"
