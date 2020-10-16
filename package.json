@@ -3,7 +3,6 @@
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "files": [
     "dist",
     "src"
@@ -34,6 +33,9 @@
     "semi": true,
     "singleQuote": true,
     "trailingComma": "es5"
+  },
+  "np": {
+    "contents": "dist"
   },
   "name": "formik-chakra-ui",
   "author": "Kagan Ugur",
