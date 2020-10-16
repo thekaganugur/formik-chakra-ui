@@ -18,14 +18,14 @@ import {
   FormCheckbox,
   FormCheckboxArray,
   FormCheckboxContainer,
-  FormInput,
-  FormRadioGroup,
-  FormSelect,
-  FormSwitch,
-  FormTextArea,
+  InputControl,
   PercentComplete,
+  RadioGroupControl,
   ResetButton,
+  SelectControl,
   SubmitButton,
+  SwitchControl,
+  TextareaControl,
 } from '../src';
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -92,14 +92,14 @@ const App = () => {
               shadow="1px 1px 3px rgba(0,0,0,0.3)"
               onSubmit={handleSubmit}
             >
-              <FormInput name="firstName" label="First Name" />
-              <FormInput name="lastName" label="Last Name" />
+              <InputControl name="firstName" label="First Name" />
+              <InputControl name="lastName" label="Last Name" />
               <FormCheckbox name="employed" label="Employed" />
-              <FormRadioGroup name="favoriteColor" label="Favorite Color">
+              <RadioGroupControl name="favoriteColor" label="Favorite Color">
                 <Radio value="#ff0000">Red</Radio>
                 <Radio value="#00ff00">Green</Radio>
                 <Radio value="#0000ff">Blue</Radio>
-              </FormRadioGroup>
+              </RadioGroupControl>
 
               <FormCheckboxContainer name="toppings" label="Toppings">
                 <FormCheckboxArray name="toppings" value="chicken">
@@ -121,13 +121,14 @@ const App = () => {
                   🍍 Pineapple
                 </FormCheckboxArray>
               </FormCheckboxContainer>
-              <FormTextArea name="notes" label="Notes" />
-              <FormSwitch name="employedd" label="Laaaaaaaaaa" />
-              <FormSelect name="notes" placeholder="Select option">
+
+              <TextareaControl name="notes" label="Notes" />
+              <SwitchControl name="employedd" label="Laaaaaaaaaa" />
+              <SelectControl name="notes" placeholder="Select option">
                 <option value="option1">Option 1</option>
                 <option value="option2">Option 2</option>
                 <option value="option3">Option 3</option>
-              </FormSelect>
+              </SelectControl>
 
               <PercentComplete />
               <ButtonGroup>

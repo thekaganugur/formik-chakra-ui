@@ -4,10 +4,10 @@ import React, { FC } from 'react';
 import { BaseProps } from '../base-props';
 import { FormControl } from '../form-control';
 
-export type FormTextareaProps = BaseProps & InputProps<HTMLTextAreaElement>;
+export type TextareaControlProps = BaseProps & InputProps<HTMLTextAreaElement>;
 
-export const FormTextArea: FC<FormTextareaProps> = (
-  props: FormTextareaProps
+export const TextareaControl: FC<TextareaControlProps> = (
+  props: TextareaControlProps
 ) => {
   const { name, label, my, ...rest } = props;
   const [field] = useField(name);
@@ -19,4 +19,4 @@ export const FormTextArea: FC<FormTextareaProps> = (
   );
 };
 
-export default FormTextArea;
+export default TextareaControl;

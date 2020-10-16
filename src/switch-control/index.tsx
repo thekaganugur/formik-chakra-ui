@@ -4,9 +4,11 @@ import React, { FC } from 'react';
 import { BaseProps } from '../base-props';
 import { FormControl } from '../form-control';
 
-export type FormSwitchProps = BaseProps & SwitchProps;
+export type SwitchControlProps = BaseProps & SwitchProps;
 
-export const FormSwitch: FC<FormSwitchProps> = (props: FormSwitchProps) => {
+export const SwitchControl: FC<SwitchControlProps> = (
+  props: SwitchControlProps
+) => {
   const { name, label, my, ...rest } = props;
   const [field, { error, touched }] = useField(name);
 
@@ -23,4 +25,4 @@ export const FormSwitch: FC<FormSwitchProps> = (props: FormSwitchProps) => {
   );
 };
 
-export default FormSwitch;
+export default SwitchControl;

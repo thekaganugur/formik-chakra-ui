@@ -2,9 +2,6 @@ import { Button, ButtonProps } from '@chakra-ui/core';
 import { useFormikContext } from 'formik';
 import React, { FC } from 'react';
 
-const isObjEmpty = (obj: object) =>
-  Object.keys(obj).length === 0 && obj.constructor === Object;
-
 export type ResetButtonProps = ButtonProps;
 
 export const ResetButton: FC<ResetButtonProps> = (props: ResetButtonProps) => {

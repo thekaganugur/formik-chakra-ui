@@ -1,20 +1,18 @@
 import { CheckboxProps, Stack, StackProps } from '@chakra-ui/core';
-import { useField } from 'formik';
 import React, { FC } from 'react';
 import { BaseProps } from '../base-props';
 import { FormControl } from '../form-control';
 
-export type FormCheckboxContainerProps = BaseProps &
+export type CheckboxContainerProps = BaseProps &
   CheckboxProps & { stackConfig?: StackProps };
 
-export const FormCheckboxContainer: FC<FormCheckboxContainerProps> = (
-  props: FormCheckboxContainerProps
+export const CheckboxContainer: FC<CheckboxContainerProps> = (
+  props: CheckboxContainerProps
 ) => {
   const { name, label, my, children, stackConfig, ...rest } = props;
-  const [field] = useField(name);
 
   return (
-    <FormControl name={name} label={label} my={my}>
+    <FormControl name={name} label={label} my={my} {...rest}>
       <Stack pl={6} mt={1} spacing={1} {...stackConfig}>
         {children}
       </Stack>
@@ -22,4 +20,4 @@ export const FormCheckboxContainer: FC<FormCheckboxContainerProps> = (
   );
 };
 
-export default FormCheckboxContainer;
+export default CheckboxContainer;

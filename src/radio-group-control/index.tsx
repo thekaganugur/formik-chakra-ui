@@ -1,22 +1,24 @@
-import { Select, SelectProps } from '@chakra-ui/core';
+import { RadioGroup, RadioGroupProps } from '@chakra-ui/core';
 import { useField } from 'formik';
 import React, { FC } from 'react';
 import { BaseProps } from '../base-props';
 import { FormControl } from '../form-control';
 
-export type FormSelectProps = BaseProps & SelectProps;
+export type RadioGroupControlProps = BaseProps & RadioGroupProps;
 
-export const FormSelect: FC<FormSelectProps> = (props: FormSelectProps) => {
+export const RadioGroupControl: FC<RadioGroupControlProps> = (
+  props: RadioGroupControlProps
+) => {
   const { name, label, my, children, ...rest } = props;
   const [field] = useField(name);
 
   return (
     <FormControl name={name} label={label} my={my}>
-      <Select id={name} {...field} {...rest}>
+      <RadioGroup {...field} {...rest}>
         {children}
-      </Select>
+      </RadioGroup>
     </FormControl>
   );
 };
 
-export default FormSelect;
+export default RadioGroupControl;

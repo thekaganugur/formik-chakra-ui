@@ -3,10 +3,10 @@ import { useField } from 'formik';
 import React, { FC } from 'react';
 import { BaseProps } from '../base-props';
 
-export type FormCheckboxArrayProps = BaseProps & CheckboxProps;
+export type CheckboxArrayProps = BaseProps & CheckboxProps;
 
-export const FormCheckboxArray: FC<FormCheckboxArrayProps> = (
-  props: FormCheckboxArrayProps
+export const CheckboxControl: FC<CheckboxArrayProps> = (
+  props: CheckboxArrayProps
 ) => {
   const { name, label, my, children, ...rest } = props;
   const [field, { error, touched }] = useField(name);
@@ -25,4 +25,4 @@ export const FormCheckboxArray: FC<FormCheckboxArrayProps> = (
   );
 };
 
-export default FormCheckboxArray;
+export default CheckboxControl;

@@ -1,29 +1,24 @@
-import {
-  Checkbox,
-  CheckboxProps,
-  RadioGroup,
-  RadioGroupProps,
-} from '@chakra-ui/core';
+import { Select, SelectProps } from '@chakra-ui/core';
 import { useField } from 'formik';
 import React, { FC } from 'react';
 import { BaseProps } from '../base-props';
 import { FormControl } from '../form-control';
 
-export type FormRadioGroupProps = BaseProps & RadioGroupProps;
+export type SelectControlProps = BaseProps & SelectProps;
 
-export const FormRadioGroup: FC<FormRadioGroupProps> = (
-  props: FormRadioGroupProps
+export const SelectControl: FC<SelectControlProps> = (
+  props: SelectControlProps
 ) => {
   const { name, label, my, children, ...rest } = props;
   const [field] = useField(name);
 
   return (
     <FormControl name={name} label={label} my={my}>
-      <RadioGroup {...field} {...rest}>
+      <Select id={name} {...field} {...rest}>
         {children}
-      </RadioGroup>
+      </Select>
     </FormControl>
   );
 };
 
-export default FormRadioGroup;
+export default SelectControl;

@@ -11,14 +11,14 @@ import React, { FC, ReactNode } from 'react';
 import { BaseProps } from '../base-props';
 import { FormControl } from '../form-control';
 
-export type FormNumberInputProps = BaseProps &
+export type NumberInputControlProps = BaseProps &
   NumberInputProps & {
     showStepper?: boolean;
     children?: ReactNode;
   };
 
-export const FormNumberInput: FC<FormNumberInputProps> = (
-  props: FormNumberInputProps
+export const NumberInputControl: FC<NumberInputControlProps> = (
+  props: NumberInputControlProps
 ) => {
   const { name, label, my, showStepper = true, children, ...rest } = props;
   const [field, { error }] = useField(name);
@@ -48,4 +48,4 @@ export const FormNumberInput: FC<FormNumberInputProps> = (
   );
 };
 
-export default FormNumberInput;
+export default NumberInputControl;

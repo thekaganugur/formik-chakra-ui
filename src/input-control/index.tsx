@@ -4,9 +4,11 @@ import React, { FC } from 'react';
 import { BaseProps } from '../base-props';
 import { FormControl } from '../form-control';
 
-export type FormInputProps = BaseProps & InputProps;
+export type InputControlProps = BaseProps & InputProps;
 
-export const FormInput: FC<FormInputProps> = (props: FormInputProps) => {
+export const InputControl: FC<InputControlProps> = (
+  props: InputControlProps
+) => {
   const { name, label, my, ...rest } = props;
   const [field] = useField(name);
 
@@ -17,4 +19,4 @@ export const FormInput: FC<FormInputProps> = (props: FormInputProps) => {
   );
 };
 
-export default FormInput;
+export default InputControl;
