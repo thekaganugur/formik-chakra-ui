@@ -1,10 +1,10 @@
 import { CheckboxProps, Stack, StackProps } from '@chakra-ui/core';
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 import { BaseProps } from '../base-props';
 import { FormControl } from '../form-control';
 
 export type CheckboxContainerProps = BaseProps &
-  CheckboxProps & { stackConfig?: StackProps };
+  CheckboxProps & { stackConfig?: StackProps; children: ReactNode };
 
 export const CheckboxContainer: FC<CheckboxContainerProps> = (
   props: CheckboxContainerProps

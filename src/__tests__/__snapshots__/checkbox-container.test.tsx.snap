@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckboxContainer  Renders Correctly 1`] = `
+<DocumentFragment>
+  <form
+    action="#"
+  >
+    <div
+      class="css-17t5ffy"
+      role="group"
+    >
+      <label
+        class="css-176s5fq"
+        for="test"
+      >
+        Test
+      </label>
+      <div
+        class="css-1ckz7z9"
+      >
+        <div>
+          noop
+        </div>
+      </div>
+    </div>
+  </form>
+</DocumentFragment>
+`;

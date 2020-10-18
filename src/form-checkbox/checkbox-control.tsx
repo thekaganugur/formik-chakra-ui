@@ -3,14 +3,20 @@ import { useField } from 'formik';
 import React, { FC } from 'react';
 import { BaseProps } from '../base-props';
 
-export type CheckboxArrayProps = BaseProps & CheckboxProps;
+type Overwrite<T, U> = Pick<T, Exclude<keyof T, keyof U>> & U;
+
+export type CheckboxArrayProps = BaseProps &
+  Overwrite<CheckboxProps, { value: string | number }>;
 
 export const CheckboxControl: FC<CheckboxArrayProps> = (
   props: CheckboxArrayProps
 ) => {
   const { name, label, my, children, ...rest } = props;
   const [field, { error, touched }] = useField(name);
-  const isChecked = field.value?.includes(props.value) ?? false;
+  let isChecked;
+  if (field.value instanceof Array) {
+    isChecked = field.value.includes(props.value) ?? false;
+  }
 
   return (
     <Checkbox
@@ -20,6 +26,7 @@ export const CheckboxControl: FC<CheckboxArrayProps> = (
       {...field}
       {...rest}
     >
+      {label}
       {children}
     </Checkbox>
   );

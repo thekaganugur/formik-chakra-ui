@@ -1,6 +1,16 @@
 {
   "version": "1.0.0-0",
   "license": "MIT",
+  "homepage": "https://github.com/kgnugur/formik-chakra-ui",
+  "keywords": [
+    "react",
+    "formik",
+    "chakra-ui"
+  ],
+  "maintainers": [
+    "Kağan Uğur"
+  ],
+  "description": "Bindings for using Formik with React Bootstrap.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
@@ -15,6 +25,7 @@
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
     "test:watch": "tsdx test --watch --passWithNoTests",
+    "test:u": "tsdx test --passWithNoTests -u",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "storybook": "start-storybook -p 6006",

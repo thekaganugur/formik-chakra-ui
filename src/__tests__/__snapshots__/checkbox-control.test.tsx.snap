@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckboxControl Renders Correctly 1`] = `
+<DocumentFragment>
+  <form
+    action="#"
+  >
+    <label
+      class="css-jwmyb8"
+    >
+      <input
+        aria-invalid="false"
+        class="css-1gy22ay"
+        id="test"
+        name="test"
+        type="checkbox"
+        value="test-value"
+      />
+      <div
+        aria-hidden="true"
+        class="css-nlndso"
+      >
+        <svg
+          class="css-1vhqk79"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 14 14"
+        >
+          <g
+            fill="currentColor"
+          >
+            <polygon
+              points="5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039"
+            />
+          </g>
+        </svg>
+      </div>
+      <div
+        class="css-6qsuox"
+      >
+        Test Label
+      </div>
+    </label>
+  </form>
+</DocumentFragment>
+`;

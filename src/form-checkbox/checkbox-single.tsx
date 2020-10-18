@@ -9,7 +9,7 @@ export type CheckboxSingleProps = BaseProps & CheckboxProps;
 export const CheckboxSingleControl: FC<CheckboxSingleProps> = (
   props: CheckboxSingleProps
 ) => {
-  const { name, label, my, ...rest } = props;
+  const { name, label, children, my, ...rest } = props;
   const [field] = useField(name);
   const isChecked = field.value;
 
@@ -17,6 +17,7 @@ export const CheckboxSingleControl: FC<CheckboxSingleProps> = (
     <FormControl name={name} my={my}>
       <Checkbox id={name} isChecked={isChecked} {...field} {...rest}>
         {label}
+        {children}
       </Checkbox>
     </FormControl>
   );

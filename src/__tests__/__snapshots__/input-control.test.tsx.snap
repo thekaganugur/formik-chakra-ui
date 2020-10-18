@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Renders Correctly 1`] = `
+<DocumentFragment>
+  <form
+    action="#"
+  >
+    <div
+      class="css-zitybv"
+      role="group"
+    >
+      <input
+        aria-invalid="false"
+        class="css-cth1sm"
+        id="test"
+        name="test"
+        value="Input"
+      />
+    </div>
+  </form>
+</DocumentFragment>
+`;

@@ -15,9 +15,9 @@ import 'react-app-polyfill/ie11';
 import * as ReactDOM from 'react-dom';
 import * as Yup from 'yup';
 import {
-  FormCheckbox,
-  FormCheckboxArray,
-  FormCheckboxContainer,
+  CheckboxContainer,
+  CheckboxControl,
+  CheckboxSingleControl,
   InputControl,
   PercentComplete,
   RadioGroupControl,
@@ -94,33 +94,35 @@ const App = () => {
             >
               <InputControl name="firstName" label="First Name" />
               <InputControl name="lastName" label="Last Name" />
-              <FormCheckbox name="employed" label="Employed" />
+              <CheckboxSingleControl name="employed">
+                Employed
+              </CheckboxSingleControl>
               <RadioGroupControl name="favoriteColor" label="Favorite Color">
                 <Radio value="#ff0000">Red</Radio>
                 <Radio value="#00ff00">Green</Radio>
                 <Radio value="#0000ff">Blue</Radio>
               </RadioGroupControl>
 
-              <FormCheckboxContainer name="toppings" label="Toppings">
-                <FormCheckboxArray name="toppings" value="chicken">
+              <CheckboxContainer name="toppings" label="Toppings">
+                <CheckboxControl name="toppings" value="chicken">
                   🐓 Chicken
-                </FormCheckboxArray>
-                <FormCheckboxArray name="toppings" value="ham">
+                </CheckboxControl>
+                <CheckboxControl name="toppings" value="ham">
                   🐷 Ham
-                </FormCheckboxArray>
-                <FormCheckboxArray name="toppings" value="mushrooms">
+                </CheckboxControl>
+                <CheckboxControl name="toppings" value="mushrooms">
                   🍄 Mushrooms
-                </FormCheckboxArray>
-                <FormCheckboxArray name="toppings" value="cheese">
+                </CheckboxControl>
+                <CheckboxControl name="toppings" value="cheese">
                   🧀 Cheese
-                </FormCheckboxArray>
-                <FormCheckboxArray name="toppings" value="tuna">
+                </CheckboxControl>
+                <CheckboxControl name="toppings" value="tuna">
                   🐟 Tuna
-                </FormCheckboxArray>
-                <FormCheckboxArray name="toppings" value="pineapple">
+                </CheckboxControl>
+                <CheckboxControl name="toppings" value="pineapple">
                   🍍 Pineapple
-                </FormCheckboxArray>
-              </FormCheckboxContainer>
+                </CheckboxControl>
+              </CheckboxContainer>
 
               <TextareaControl name="notes" label="Notes" />
               <SwitchControl name="employedd" label="Laaaaaaaaaa" />
