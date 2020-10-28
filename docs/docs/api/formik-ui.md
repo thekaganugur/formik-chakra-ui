@@ -116,9 +116,144 @@ type NumberInputControlProps = BaseProps & {
 ### Example
 
 ```jsx
-import { InputControl } from 'formik-chakra-ui';
+import { NumberInputControl } from 'formik-chakra-ui';
 
 <NumberInputControl name="age" label="Last Name" />;
 ```
 
 #### [Chakra UI Documentation](https://next.chakra-ui.com/docs/form/number-input)
+
+## PercentComplete
+
+### Type
+
+```typescript
+type PercentCompleteProps = {
+  progressProps?: ProgressProps;
+  boxProps?: BoxProps;
+  progressFn?: ProgressFn;
+};
+```
+
+### Example
+
+```jsx
+import { PercentComplete } from 'formik-chakra-ui';
+
+<PercentComplete />;
+```
+
+## RadioGroup
+
+### Type
+
+```typescript
+RadioGroupControlProps = BaseProps & {
+  radioGroupProps?: RadioGroupProps;
+  stackProps?: StackProps;
+  children: ReactNode;
+};
+
+```
+
+### Example
+
+```jsx
+import { RadioGroupControl, Radio } from 'formik-chakra-ui';
+
+<RadioGroupControl name="favoriteColor" label="Favorite Color">
+  <Radio value="#ff0000">Red</Radio>
+  <Radio value="#00ff00">Green</Radio>
+  <Radio value="#0000ff">Blue</Radio>
+</RadioGroupControl>;
+```
+
+#### [Chakra UI Documentation](https://next.chakra-ui.com/docs/form/radio)
+
+## ResetButton
+
+### Type
+
+```typescript
+ResetButtonProps = ButtonProps;
+```
+
+### Example
+
+```jsx
+import { ResetButton } from 'formik-chakra-ui';
+
+<ResetButton>Reset</ResetButton>;
+```
+
+## SelectControl
+
+### Type
+
+```typescript
+SelectControlProps = BaseProps & {
+  selectProps?: SelectProps;
+  children: ReactNode;
+};
+
+```
+
+### Example
+
+```jsx
+import { SelectControl } from 'formik-chakra-ui';
+
+<SelectControl name="notes" selectProps={{ placeholder: 'Select option' }}>
+  <option value="option1">Option 1</option>
+  <option value="option2">Option 2</option>
+  <option value="option3">Option 3</option>
+</SelectControl>;
+```
+
+## SubmitButton
+
+### Type
+
+```typescript
+type SubmitButtonProps = ButtonProps;
+```
+
+### Example
+
+```jsx
+import { SubmitButton } from 'formik-chakra-ui';
+
+<SubmitButton>Submit</SubmitButton>;
+```
+
+## SwitchControl
+
+### Type
+
+```typescript
+type SwitchControlProps = BaseProps & { switchProps?: SwitchProps };
+```
+
+### Example
+
+```jsx
+import { SwitchControl } from 'formik-chakra-ui';
+
+<SwitchControl name="employedd" label="Employed" />;
+```
+
+## Textarea
+
+### Type
+
+```typescript
+type TextareaControlProps = BaseProps & { textareaProps?: TextareaProps };
+```
+
+### Example
+
+```jsx
+import { TextareaControl } from 'formik-chakra-ui';
+
+<TextareaControl name="notes" label="Notes" />;
+```

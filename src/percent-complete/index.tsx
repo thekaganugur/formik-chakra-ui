@@ -1,4 +1,4 @@
-import { Box, Progress, ProgressProps } from '@chakra-ui/core';
+import { Box, BoxProps, Progress, ProgressProps } from '@chakra-ui/core';
 import { useFormikContext } from 'formik';
 import React, { FC, useEffect } from 'react';
 
@@ -9,14 +9,16 @@ const calculateProgress: ProgressFn = (numFields, numErrors) => {
   return (validFields / numFields) * 100;
 };
 
-export type PercentCompleteProps = ProgressProps & {
+export type PercentCompleteProps = {
+  progressProps?: ProgressProps;
+  boxProps?: BoxProps;
   progressFn?: ProgressFn;
 };
 
 export const PercentComplete: FC<PercentCompleteProps> = (
   props: PercentCompleteProps
 ) => {
-  const { children, progressFn = calculateProgress, ...rest } = props;
+  const { progressFn = calculateProgress, progressProps, boxProps } = props;
   const { errors, values, validateForm, dirty } = useFormikContext();
   const numFields = Object.keys(values as object).length;
   const numErrors = Object.keys(errors).length;
@@ -26,12 +28,12 @@ export const PercentComplete: FC<PercentCompleteProps> = (
   }, [dirty]);
 
   return (
-    <Box marginY={5}>
+    <Box marginY={5} {...boxProps}>
       <Progress
         hasStripe
         isAnimated
         value={progressFn(numFields, numErrors)}
-        {...rest}
+        {...progressProps}
       />
     </Box>
   );

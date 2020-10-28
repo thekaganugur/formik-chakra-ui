@@ -1,20 +1,19 @@
 import {
-  FormControlProps,
   RadioGroup,
   RadioGroupProps,
   Stack,
   StackProps,
 } from '@chakra-ui/core';
 import { useField } from 'formik';
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 import { BaseProps } from '../base-props';
 import { FormControl } from '../form-control';
 
-export type RadioGroupControlProps = BaseProps &
-  FormControlProps & {
-    radioGroupProps?: RadioGroupProps;
-    stackProps?: StackProps;
-  };
+export type RadioGroupControlProps = BaseProps & {
+  radioGroupProps?: RadioGroupProps;
+  stackProps?: StackProps;
+  children: ReactNode;
+};
 
 export const RadioGroupControl: FC<RadioGroupControlProps> = (
   props: RadioGroupControlProps
@@ -22,17 +21,20 @@ export const RadioGroupControl: FC<RadioGroupControlProps> = (
   const {
     name,
     label,
-    my,
-    children,
+    formControlProps,
     radioGroupProps,
-    stackProps = { direction: 'row' },
+    stackProps,
+    children,
   } = props;
   const [field] = useField(name);
+  console.log(field);
 
   return (
-    <FormControl name={name} label={label} my={my}>
+    <FormControl name={name} label={label} {...formControlProps}>
       <RadioGroup {...field} {...radioGroupProps}>
-        <Stack {...stackProps}>{children}</Stack>
+        <Stack direction="row" {...stackProps}>
+          {children}
+        </Stack>
       </RadioGroup>
     </FormControl>
   );

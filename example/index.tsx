@@ -126,7 +126,10 @@ const App = () => {
             </CheckboxContainer>
             <TextareaControl name="notes" label="Notes" />
             <SwitchControl name="employedd" label="Employed" />
-            <SelectControl name="notes" placeholder="Select option">
+            <SelectControl
+              name="notes"
+              selectProps={{ placeholder: 'Select option' }}
+            >
               <option value="option1">Option 1</option>
               <option value="option2">Option 2</option>
               <option value="option3">Option 3</option>
