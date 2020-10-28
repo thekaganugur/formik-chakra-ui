@@ -14,7 +14,7 @@ Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [React B
 
 ## Documentation
 
-TODO: I will add an link for documentation.
+All documentation can be found [here](https://angry-einstein-b7909a.netlify.app/docs/api/formik-ui/)
 
 ## Progress
 
