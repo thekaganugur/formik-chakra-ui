@@ -12,11 +12,11 @@ export type FormControlProps = Omit<BaseProps, 'label'> &
   ChakraFormControlProps & { label?: string };
 
 export const FormControl: FC<FormControlProps> = (props: FormControlProps) => {
-  const { children, name, label, my = 4 } = props;
+  const { children, name, label, my = 4, ...rest } = props;
   const [, { error, touched }] = useField(name);
 
   return (
-    <ChakraFormControl isInvalid={!!error && touched} my={my}>
+    <ChakraFormControl isInvalid={!!error && touched} my={my} {...rest}>
       {label && <FormLabel htmlFor={name}>{label}</FormLabel>}
       {children}
       {error && <FormErrorMessage>{error}</FormErrorMessage>}

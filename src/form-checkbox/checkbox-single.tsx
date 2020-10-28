@@ -1,21 +1,24 @@
 import { Checkbox, CheckboxProps } from '@chakra-ui/core';
 import { useField } from 'formik';
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 import { BaseProps } from '../base-props';
 import { FormControl } from '../form-control';
 
-export type CheckboxSingleProps = BaseProps & CheckboxProps;
+export type CheckboxSingleProps = BaseProps & {
+  checkBoxProps?: CheckboxProps;
+  children: ReactNode;
+};
 
 export const CheckboxSingleControl: FC<CheckboxSingleProps> = (
   props: CheckboxSingleProps
 ) => {
-  const { name, label, children, my, ...rest } = props;
+  const { name, label, children, formControlProps, checkBoxProps } = props;
   const [field] = useField(name);
   const isChecked = field.value;
 
   return (
-    <FormControl name={name} my={my}>
-      <Checkbox id={name} isChecked={isChecked} {...field} {...rest}>
+    <FormControl name={name} {...formControlProps}>
+      <Checkbox id={name} isChecked={isChecked} {...field} {...checkBoxProps}>
         {label}
         {children}
       </Checkbox>

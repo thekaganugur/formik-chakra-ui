@@ -1,4 +1,4 @@
-import { CSSReset, ThemeProvider } from '@chakra-ui/core';
+import { ChakraProvider } from '@chakra-ui/core';
 import { render } from '@testing-library/react';
 import { Form, Formik } from 'formik';
 import * as React from 'react';
@@ -8,12 +8,11 @@ test('CheckboxContainer  Renders Correctly', () => {
   const { asFragment } = render(
     <Formik onSubmit={() => {}} initialValues={{ test: [] }}>
       <Form>
-        <ThemeProvider>
-          <CSSReset />
+        <ChakraProvider>
           <CheckboxContainer name="test" label="Test">
             <div>noop</div>
           </CheckboxContainer>
-        </ThemeProvider>
+        </ChakraProvider>
       </Form>
     </Formik>
   );

@@ -8,7 +8,13 @@ Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [React B
 
 🚧🚧 This library is not production ready, yet. 🚧🚧
 
+ℹℹ This library is compatible with `chakra-ui@1` ℹℹ
+
 ---
+
+## Documentation
+
+TODO: I will add an link for documentation.
 
 ## Progress
 
@@ -31,13 +37,3 @@ Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [React B
 - [x] Submit button
 - [x] Reset button
 - [x] Form progress
-
-### Test
-
-- [ ] %70 Test covarage 👀👀
-- [ ] %90 Test covarage
-
-### For the community
-
-- [ ] Better documentation
-- [ ] Codesandbox examples

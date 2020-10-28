@@ -1,4 +1,4 @@
-import { Switch, SwitchProps } from '@chakra-ui/core';
+import { Flex, Switch, SwitchProps } from '@chakra-ui/core';
 import { useField } from 'formik';
 import React, { FC } from 'react';
 import { BaseProps } from '../base-props';
@@ -13,7 +13,13 @@ export const SwitchControl: FC<SwitchControlProps> = (
   const [field, { error, touched }] = useField(name);
 
   return (
-    <FormControl name={name} label={label} my={my}>
+    <FormControl
+      name={name}
+      label={label}
+      my={my}
+      as={Flex}
+      alignItems="center"
+    >
       <Switch
         id={name}
         isInvalid={!!error && touched}

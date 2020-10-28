@@ -10,7 +10,7 @@ export const ResetButton: FC<ResetButtonProps> = (props: ResetButtonProps) => {
 
   return (
     <Button
-      variantColor="teal"
+      colorScheme="teal"
       variant="outline"
       onClick={() => resetForm()}
       isDisabled={isSubmitting || !dirty}

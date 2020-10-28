@@ -7,7 +7,7 @@ export type SubmitButtonProps = ButtonProps & { disableIfError?: boolean };
 export const SubmitButton: FC<SubmitButtonProps> = (
   props: SubmitButtonProps
 ) => {
-  const { children, variantColor = 'teal', disableIfError, ...rest } = props;
+  const { children, colorScheme = 'teal', disableIfError, ...rest } = props;
   const { isSubmitting } = useFormikContext();
 
   return (
@@ -15,7 +15,7 @@ export const SubmitButton: FC<SubmitButtonProps> = (
       type="submit"
       isLoading={isSubmitting}
       {...rest}
-      variantColor={variantColor}
+      colorScheme={colorScheme}
     >
       {children}
     </Button>
