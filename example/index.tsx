@@ -16,6 +16,7 @@ import {
   CheckboxControl,
   CheckboxSingleControl,
   InputControl,
+  NumberInputControl,
   PercentComplete,
   RadioGroupControl,
   ResetButton,
@@ -36,6 +37,7 @@ const onSubmit = values => {
 const initialValues = {
   firstName: '',
   lastName: '',
+  age: 0,
   employed: false,
   favoriteColor: '',
   toppings: ['tuna'],
@@ -45,6 +47,9 @@ const initialValues = {
 const validationSchema = Yup.object({
   firstName: Yup.string().required(),
   lastName: Yup.string().required(),
+  age: Yup.number()
+    .required()
+    .min(18),
   employed: Yup.boolean().equals([true]),
   favoriteColor: Yup.string(),
   toppings: Yup.array().min(2),
@@ -90,6 +95,7 @@ const App = () => {
           >
             <InputControl name="firstName" label="First Name" />
             <InputControl name="lastName" label="Last Name" />
+            <NumberInputControl name="age" label="Last Name" />
             <CheckboxSingleControl name="employed">
               Employed
             </CheckboxSingleControl>

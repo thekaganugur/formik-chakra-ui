@@ -8,10 +8,10 @@ title: Formik UI
 ### Type
 
 ```typescript
-CheckboxContainerProps = BaseProps & {
-checkBoxProps?: CheckboxProps;
-stackConfig?: StackProps;
-children: ReactNode;
+type CheckboxContainerProps = BaseProps & {
+  checkBoxProps?: CheckboxProps;
+  stackConfig?: StackProps;
+  children: ReactNode;
 };
 ```
 
@@ -82,3 +82,43 @@ import { CheckboxSingleControl } from 'formik-chakra-ui';
 ```
 
 #### [Chakra UI Documentation](https://next.chakra-ui.com/docs/form/checkbox)
+
+## InputControl
+
+### Type
+
+```typescript
+type InputControlProps = BaseProps & { inputProps?: InputProps };
+```
+
+### Example
+
+```jsx
+import { InputControl } from 'formik-chakra-ui';
+
+<InputControl name="firstName" label="First Name" />;
+```
+
+#### [Chakra UI Documentation](https://next.chakra-ui.com/docs/form/input)
+
+## NumberInputControl
+
+### Type
+
+```typescript
+type NumberInputControlProps = BaseProps & {
+  numberInputProps?: NumberInputProps;
+  showStepper?: boolean;
+  children?: ReactNode;
+};
+```
+
+### Example
+
+```jsx
+import { InputControl } from 'formik-chakra-ui';
+
+<NumberInputControl name="age" label="Last Name" />;
+```
+
+#### [Chakra UI Documentation](https://next.chakra-ui.com/docs/form/number-input)
