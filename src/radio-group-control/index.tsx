@@ -4,7 +4,7 @@ import {
   Stack,
   StackProps,
 } from '@chakra-ui/core';
-import { useField } from 'formik';
+import { useField, useFormikContext } from 'formik';
 import React, { FC, ReactNode } from 'react';
 import { BaseProps } from '../base-props';
 import { FormControl } from '../form-control';
@@ -27,11 +27,14 @@ export const RadioGroupControl: FC<RadioGroupControlProps> = (
     children,
   } = props;
   const [field] = useField(name);
-  console.log(field);
+  const { setFieldValue } = useFormikContext();
+  const handleChange = value => {
+    setFieldValue(name, value);
+  };
 
   return (
     <FormControl name={name} label={label} {...formControlProps}>
-      <RadioGroup {...field} {...radioGroupProps}>
+      <RadioGroup {...field} onChange={handleChange} {...radioGroupProps}>
         <Stack direction="row" {...stackProps}>
           {children}
         </Stack>
