@@ -28,7 +28,7 @@ export const RadioGroupControl: FC<RadioGroupControlProps> = (
   } = props;
   const [field] = useField(name);
   const { setFieldValue } = useFormikContext();
-  const handleChange = value => {
+  const handleChange = (value: string) => {
     setFieldValue(name, value);
   };
 

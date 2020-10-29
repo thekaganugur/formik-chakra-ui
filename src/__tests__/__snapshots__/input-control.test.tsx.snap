@@ -6,12 +6,11 @@ exports[`Input Renders Correctly 1`] = `
     action="#"
   >
     <div
-      class="css-zitybv"
+      class="chakra-form-control css-1nalauf"
       role="group"
     >
       <input
-        aria-invalid="false"
-        class="css-cth1sm"
+        class="chakra-input css-0"
         id="test"
         name="test"
         value="Input"

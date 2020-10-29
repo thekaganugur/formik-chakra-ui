@@ -4,9 +4,12 @@
 
 Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [React Bootstrap](https://react-bootstrap.github.io).
 
----
+## Why?
 
-🚧🚧 This library is not production ready, yet. 🚧🚧
+[Inversion of Control](https://kentcdodds.com/blog/inversion-of-control) is
+really cool and [Compound Components](https://kentcdodds.com/blog/inversion-of-control#compound-components) do provide really flexible API. This library is opinionated, provides bindings for Formik, with necessary paddings exct.
+
+---
 
 ℹℹ This library is compatible with `chakra-ui@1` ℹℹ
 

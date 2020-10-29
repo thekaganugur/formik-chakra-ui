@@ -3,6 +3,16 @@ id: formik-ui
 title: Formik UI
 ---
 
+## BaseProps Type
+
+```typescript
+interface BaseProps {
+  name: string;
+  label?: string;
+  formControlProps?: Omit<FormControlProps, 'name' | 'label'>;
+}
+```
+
 ## CheckboxContainer
 
 ### Type
