@@ -2,6 +2,7 @@
   "version": "1.2.0-0",
   "license": "MIT",
   "homepage": "https://github.com/kgnugur/formik-chakra-ui",
+  "repository": "git@github.com:kgnugur/formik-chakra-ui",
   "keywords": [
     "react",
     "formik",
