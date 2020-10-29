@@ -1,4 +1,4 @@
-# Chakra UI Bindings for Formik
+# Chakra UI Bindings for Formik 🧵
 
 [![license](https://badgen.now.sh/badge/license/MIT)](./LICENSE)
 
