@@ -45,9 +45,6 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "np": {
-    "contents": "dist"
-  },
   "name": "formik-chakra-ui",
   "author": "Kagan Ugur",
   "module": "dist/formik-chakra-ui.esm.js",
