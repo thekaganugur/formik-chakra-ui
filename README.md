@@ -1,6 +1,6 @@
 # Chakra UI Bindings for Formik 🧵
 
-Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [React Bootstrap](https://react-bootstrap.github.io).
+Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [Chakra UI](http://next.chakra-ui.com).
 
 [![license](https://badgen.now.sh/badge/license/MIT)](./LICENSE)
 
