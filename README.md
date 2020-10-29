@@ -1,8 +1,14 @@
 # Chakra UI Bindings for Formik 🧵
 
+Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [React Bootstrap](https://react-bootstrap.github.io).
+
 [![license](https://badgen.now.sh/badge/license/MIT)](./LICENSE)
 
-Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [React Bootstrap](https://react-bootstrap.github.io).
+---
+
+ℹℹ This library is compatible with `chakra-ui@1` ℹℹ
+
+---
 
 ## Why?
 
@@ -10,12 +16,6 @@ Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [React B
 really cool and [Compound Components](https://kentcdodds.com/blog/inversion-of-control#compound-components) do provide really flexible API.
 
 Yet this library is opinionated, provides bindings for Formik, with necessary paddings etc. You can easily opt-out continue to use Chakra UI if you need custom components. But this library will support %90 of the use-cases when building and form.
-
----
-
-ℹℹ This library is compatible with `chakra-ui@1` ℹℹ
-
----
 
 ## Documentation
 
