@@ -1,4 +1,4 @@
-import { Flex, Switch, SwitchProps } from '@chakra-ui/core';
+import { Flex, Switch, SwitchProps } from '@chakra-ui/react';
 import { useField } from 'formik';
 import React, { FC } from 'react';
 import { BaseProps } from '../base-props';

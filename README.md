@@ -4,12 +4,6 @@ Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [Chakra 
 
 [![license](https://badgen.now.sh/badge/license/MIT)](./LICENSE)
 
----
-
-ℹℹ This library is compatible with `chakra-ui@1` ℹℹ
-
----
-
 ## Why?
 
 [Inversion of Control](https://kentcdodds.com/blog/inversion-of-control) is

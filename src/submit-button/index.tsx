@@ -1,4 +1,4 @@
-import { Button, ButtonProps } from '@chakra-ui/core';
+import { Button, ButtonProps } from '@chakra-ui/react';
 import { useFormikContext } from 'formik';
 import React, { FC } from 'react';
 

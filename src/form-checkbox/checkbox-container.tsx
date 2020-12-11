@@ -1,4 +1,4 @@
-import { CheckboxProps, Stack, StackProps } from '@chakra-ui/core';
+import { CheckboxProps, Stack, StackProps } from '@chakra-ui/react';
 import React, { FC, ReactNode } from 'react';
 import { BaseProps } from '../base-props';
 import { FormControl } from '../form-control';

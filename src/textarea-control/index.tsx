@@ -1,4 +1,4 @@
-import { Textarea, TextareaProps } from '@chakra-ui/core';
+import { Textarea, TextareaProps } from '@chakra-ui/react';
 import { useField } from 'formik';
 import React, { FC } from 'react';
 import { BaseProps } from '../base-props';

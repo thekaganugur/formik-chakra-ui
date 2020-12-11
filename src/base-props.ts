@@ -1,4 +1,4 @@
-import { FormControlProps } from '@chakra-ui/core';
+import { FormControlProps } from '@chakra-ui/react';
 
 export interface BaseProps {
   name: string;

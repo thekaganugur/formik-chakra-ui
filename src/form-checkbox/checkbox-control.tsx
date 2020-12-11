@@ -1,4 +1,4 @@
-import { Checkbox, CheckboxProps } from '@chakra-ui/core';
+import { Checkbox, CheckboxProps } from '@chakra-ui/react';
 import { useField } from 'formik';
 import React, { FC } from 'react';
 

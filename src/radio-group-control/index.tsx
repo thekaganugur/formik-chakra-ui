@@ -3,7 +3,7 @@ import {
   RadioGroupProps,
   Stack,
   StackProps,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import { useField, useFormikContext } from 'formik';
 import React, { FC, ReactNode } from 'react';
 import { BaseProps } from '../base-props';

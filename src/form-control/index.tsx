@@ -3,7 +3,7 @@ import {
   FormControlProps as ChakraFormControlProps,
   FormErrorMessage,
   FormLabel,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import { useField } from 'formik';
 import React, { FC } from 'react';
 import { BaseProps } from '../base-props';

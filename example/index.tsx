@@ -6,7 +6,7 @@ import {
   Link,
   Radio,
   theme,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import { Formik } from 'formik';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';

@@ -6,7 +6,7 @@ title: Getting Started
 ## Installation
 
 ```
-yarn add formik formik-chakra-ui @chakra-ui/core@next framer-motion
+yarn add formik formik-chakra-ui @chakra-ui/react@next framer-motion
 
 ```
 
@@ -21,7 +21,7 @@ import {
   Link,
   Radio,
   theme,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import { Formik } from 'formik';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';

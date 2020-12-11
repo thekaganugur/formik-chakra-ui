@@ -1,4 +1,4 @@
-import { Box, BoxProps, Progress, ProgressProps } from '@chakra-ui/core';
+import { Box, BoxProps, Progress, ProgressProps } from '@chakra-ui/react';
 import { useFormikContext } from 'formik';
 import React, { FC, useEffect } from 'react';
 

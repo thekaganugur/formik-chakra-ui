@@ -1,4 +1,4 @@
-import { ChakraProvider } from '@chakra-ui/core';
+import { ChakraProvider } from '@chakra-ui/react';
 import { render } from '@testing-library/react';
 import { Form, Formik } from 'formik';
 import * as React from 'react';
