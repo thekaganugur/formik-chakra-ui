@@ -9,11 +9,11 @@ export type InputControlProps = BaseProps & { inputProps?: InputProps };
 export const InputControl: FC<InputControlProps> = (
   props: InputControlProps
 ) => {
-  const { name, label, formControlProps, inputProps } = props;
+  const { name, label, inputProps, ...rest } = props;
   const [field] = useField(name);
 
   return (
-    <FormControl name={name} label={label} {...formControlProps}>
+    <FormControl name={name} label={label} {...rest}>
       <Input {...field} id={name} {...inputProps} />
     </FormControl>
   );
