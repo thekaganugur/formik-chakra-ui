@@ -21,15 +21,17 @@ All documentation can be found [here](https://angry-einstein-b7909a.netlify.app/
 
 - [x] Button
 - [x] Checkbox
-- [ ] Editable Text
-- [x] NumberInput
+- [ ] Editable 👀
+- [ ] Icon Button 👀
+- [x] Input
+- [x] Number Input
+- [ ] Pin Input 👀
 - [x] Radio (`<RadioGroup/>`)
   - [x] Rendering util function/component for `<Radio/>`
 - [x] Select
 - [ ] Slider 👀
 - [x] Switch
 - [x] Textarea
-- [x] Input
 
 ### Utility Components
 

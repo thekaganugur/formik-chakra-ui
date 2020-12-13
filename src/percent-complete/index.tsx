@@ -11,14 +11,13 @@ const calculateProgress: ProgressFn = (numFields, numErrors) => {
 
 export type PercentCompleteProps = {
   progressProps?: ProgressProps;
-  boxProps?: BoxProps;
   progressFn?: ProgressFn;
-};
+} & BoxProps;
 
 export const PercentComplete: FC<PercentCompleteProps> = (
   props: PercentCompleteProps
 ) => {
-  const { progressFn = calculateProgress, progressProps, boxProps } = props;
+  const { progressFn = calculateProgress, progressProps, ...rest } = props;
   const { errors, values, validateForm, dirty } = useFormikContext();
   const numFields = Object.keys(values as object).length;
   const numErrors = Object.keys(errors).length;
@@ -28,7 +27,7 @@ export const PercentComplete: FC<PercentCompleteProps> = (
   }, [dirty]);
 
   return (
-    <Box marginY={5} {...boxProps}>
+    <Box marginY={5} {...rest}>
       <Progress
         hasStripe
         isAnimated

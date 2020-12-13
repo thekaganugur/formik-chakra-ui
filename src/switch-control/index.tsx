@@ -9,7 +9,7 @@ export type SwitchControlProps = BaseProps & { switchProps?: SwitchProps };
 export const SwitchControl: FC<SwitchControlProps> = (
   props: SwitchControlProps
 ) => {
-  const { name, label, formControlProps, switchProps } = props;
+  const { name, label, switchProps, ...rest } = props;
   const [field, { error, touched }] = useField(name);
 
   return (
@@ -18,7 +18,7 @@ export const SwitchControl: FC<SwitchControlProps> = (
       label={label}
       as={Flex}
       alignItems="center"
-      {...formControlProps}
+      {...rest}
     >
       <Switch
         id={name}

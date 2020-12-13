@@ -25,8 +25,8 @@ export const NumberInputControl: FC<NumberInputControlProps> = (
     label,
     showStepper = true,
     children,
-    formControlProps,
     numberInputProps,
+    ...rest
   } = props;
   const [field, { error, touched }] = useField(name);
   const { setFieldValue } = useFormikContext();
@@ -35,7 +35,7 @@ export const NumberInputControl: FC<NumberInputControlProps> = (
     setFieldValue(name, value);
 
   return (
-    <FormControl name={name} label={label} {...formControlProps}>
+    <FormControl name={name} label={label} {...rest}>
       <NumberInput
         {...field}
         onChange={$setFieldValue(name)}

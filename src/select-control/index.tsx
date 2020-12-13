@@ -12,11 +12,11 @@ export type SelectControlProps = BaseProps & {
 export const SelectControl: FC<SelectControlProps> = (
   props: SelectControlProps
 ) => {
-  const { name, label, formControlProps, selectProps, children } = props;
+  const { name, label, selectProps, children, ...rest } = props;
   const [field] = useField(name);
 
   return (
-    <FormControl name={name} label={label} {...formControlProps}>
+    <FormControl name={name} label={label} {...rest}>
       <Select id={name} {...field} {...selectProps}>
         {children}
       </Select>

@@ -6,10 +6,9 @@ title: Formik UI
 ## BaseProps Type
 
 ```typescript
-interface BaseProps {
+interface BaseProps extends FormControlProps {
   name: string;
   label?: string;
-  formControlProps?: Omit<FormControlProps, 'name' | 'label'>;
 }
 ```
 
@@ -19,8 +18,7 @@ interface BaseProps {
 
 ```typescript
 type CheckboxContainerProps = BaseProps & {
-  checkBoxProps?: CheckboxProps;
-  stackConfig?: StackProps;
+  stackProps?: StackProps;
   children: ReactNode;
 };
 ```
@@ -140,9 +138,8 @@ import { NumberInputControl } from 'formik-chakra-ui';
 ```typescript
 type PercentCompleteProps = {
   progressProps?: ProgressProps;
-  boxProps?: BoxProps;
   progressFn?: ProgressFn;
-};
+} & BoxProps;
 ```
 
 ### Example

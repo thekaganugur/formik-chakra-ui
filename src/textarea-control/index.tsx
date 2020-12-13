@@ -11,11 +11,11 @@ export type TextareaControlProps = BaseProps & {
 export const TextareaControl: FC<TextareaControlProps> = (
   props: TextareaControlProps
 ) => {
-  const { name, label, formControlProps, textareaProps } = props;
+  const { name, label, textareaProps, ...rest } = props;
   const [field] = useField(name);
 
   return (
-    <FormControl name={name} label={label} {...formControlProps}>
+    <FormControl name={name} label={label} {...rest}>
       <Textarea id={name} {...field} {...textareaProps} />
     </FormControl>
   );
