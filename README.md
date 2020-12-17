@@ -11,6 +11,9 @@ really cool and [Compound Components](https://kentcdodds.com/blog/inversion-of-c
 
 Yet this library is opinionated, provides bindings for Formik, with necessary paddings etc. You can easily opt-out continue to use Chakra UI if you need custom components. But this library will support %90 of the use-cases when building and form.
 
+## Example
+[Codesandbox example](https://codesandbox.io/s/formik-chakra-ui-27yzm?file=/src/Form.tsx)
+
 ## Documentation
 
 All documentation can be found [here](https://angry-einstein-b7909a.netlify.app/docs/api/formik-ui/)
