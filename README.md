@@ -25,7 +25,6 @@ All documentation can be found [here](https://angry-einstein-b7909a.netlify.app/
 - [x] Button
 - [x] Checkbox
 - [ ] Editable 👀
-- [ ] Icon Button 👀
 - [x] Input
 - [x] Number Input
 - [ ] Pin Input 👀
