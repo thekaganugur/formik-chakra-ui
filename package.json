@@ -11,7 +11,7 @@
   "maintainers": [
     "Kağan Uğur"
   ],
-  "description": "Bindings for using Formik with React Bootstrap.",
+  "description": "Bindings for using Formik with Chakra UI.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [

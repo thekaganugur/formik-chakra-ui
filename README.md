@@ -3,6 +3,7 @@
 Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [Chakra UI](http://next.chakra-ui.com).
 
 [![license](https://badgen.now.sh/badge/license/MIT)](./LICENSE)
+![npm](https://img.shields.io/npm/dt/formik-chakra-ui)
 
 ## Why?
 
@@ -11,12 +12,38 @@ really cool and [Compound Components](https://kentcdodds.com/blog/inversion-of-c
 
 Yet this library is opinionated, provides bindings for Formik, with necessary paddings etc. You can easily opt-out continue to use Chakra UI if you need custom components. But this library will support %90 of the use-cases when building and form.
 
-## Example
-[Codesandbox example](https://codesandbox.io/s/formik-chakra-ui-27yzm?file=/src/Form.tsx)
+## Getting started
+
+`yarn add @chakra-ui/react @emotion/react @emotion/styled framer-motion formik-chakra-ui`
+
+Or
+
+`npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion formik-chakra-ui`
+
+Than setup providers.
+
+```jsx
+import * as React from 'react';
+// 1. import `ChakraProvider` component
+import { ChakraProvider } from '@chakra-ui/react';
+
+function App() {
+  // 2. Use at the root of your app
+  return (
+    <ChakraProvider>
+      <App />
+    </ChakraProvider>
+  );
+}
+```
 
 ## Documentation
 
 All documentation can be found [here](https://angry-einstein-b7909a.netlify.app/docs/api/formik-ui/)
+
+## Example
+
+[Codesandbox example](https://codesandbox.io/s/formik-chakra-ui-27yzm?file=/src/Form.tsx)
 
 ## Progress
 
