@@ -14,11 +14,11 @@ Yet this library is opinionated, provides bindings for Formik, with necessary pa
 
 ## Getting started
 
-`yarn add @chakra-ui/react @emotion/react @emotion/styled framer-motion formik-chakra-ui`
+`yarn add @chakra-ui/react @emotion/react @emotion/styled framer-motion formik formik-chakra-ui`
 
 Or
 
-`npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion formik-chakra-ui`
+`npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion formik formik-chakra-ui`
 
 Than setup providers.
 
