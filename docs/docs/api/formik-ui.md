@@ -166,7 +166,8 @@ RadioGroupControlProps = BaseProps & {
 ### Example
 
 ```jsx
-import { RadioGroupControl, Radio } from 'formik-chakra-ui';
+import { Radio } from "@chakra-ui/react";
+import { RadioGroupControl } from 'formik-chakra-ui';
 
 <RadioGroupControl name="favoriteColor" label="Favorite Color">
   <Radio value="#ff0000">Red</Radio>
