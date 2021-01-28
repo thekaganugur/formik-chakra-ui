@@ -22,7 +22,7 @@ exports[`CheckboxControl Renders Correctly 1`] = `
         class="chakra-checkbox__control css-co2d90"
       />
       <div
-        class="chakra-checkbox__label css-1vkf62h"
+        class="chakra-checkbox__label css-sklcna"
       >
         Test Label
       </div>

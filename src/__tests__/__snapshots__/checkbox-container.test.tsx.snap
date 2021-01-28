@@ -10,14 +10,14 @@ exports[`CheckboxContainer  Renders Correctly 1`] = `
       role="group"
     >
       <label
-        class="chakra-form__label css-nspfn4"
+        class="chakra-form__label css-1qqx8g3"
         for="test"
         id="field-1-label"
       >
         Test
       </label>
       <div
-        class="chakra-stack css-1ev9dki"
+        class="chakra-stack css-1s0equv"
       >
         <div>
           noop
