@@ -58,7 +58,7 @@ All documentation can be found [here](https://angry-einstein-b7909a.netlify.app/
 - [x] Radio (`<RadioGroup/>`)
   - [x] Rendering util function/component for `<Radio/>`
 - [x] Select
-- [ ] Slider 👀
+- [x] Slider
 - [x] Switch
 - [x] Textarea
 

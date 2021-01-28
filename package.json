@@ -28,12 +28,10 @@
     "test:watch": "tsdx test --watch --passWithNoTests",
     "test:u": "tsdx test --passWithNoTests -u",
     "lint": "tsdx lint",
-    "prepare": "tsdx build",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "prepare": "tsdx build"
   },
   "peerDependencies": {
-    "react": ">=16"
+    "react": ">=17"
   },
   "husky": {
     "hooks": {
@@ -50,36 +48,30 @@
   "author": "Kagan Ugur",
   "module": "dist/formik-chakra-ui.esm.js",
   "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@chakra-ui/react": "^1.0.3",
-    "@emotion/react": "^11.1.2",
+    "@babel/core": "^7.12.10",
+    "@chakra-ui/react": "^1.1.6",
+    "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
-    "@storybook/addon-actions": "^6.0.26",
-    "@storybook/addon-docs": "^6.0.26",
-    "@storybook/addon-info": "^5.3.21",
-    "@storybook/addon-links": "^6.0.26",
-    "@storybook/addons": "^6.0.26",
-    "@storybook/react": "^6.0.26",
-    "@testing-library/react": "^11.0.4",
-    "@types/react": "^16.9.51",
-    "@types/react-dom": "^16.9.8",
-    "@types/yup": "^0.29.8",
-    "babel-loader": "^8.1.0",
-    "formik": "^2.2.0",
-    "framer-motion": "^2.9.5",
-    "husky": "^4.3.0",
+    "@testing-library/react": "^11.2.3",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/yup": "^0.29.11",
+    "babel-loader": "^8.2.2",
+    "formik": "^2.2.6",
+    "framer-motion": "^3.2.1",
+    "husky": "^4.3.8",
     "react": "^16.13.1",
     "react-docgen-typescript-loader": "^3.7.2",
-    "react-dom": "^16.13.1",
-    "react-is": "^16.13.1",
-    "ts-loader": "^8.0.4",
-    "tsdx": "^0.13.3",
-    "tslib": "^2.0.2",
-    "typescript": "^4.0.3",
-    "yup": "^0.29.3"
+    "react-dom": "^17.0.1",
+    "react-is": "^17.0.1",
+    "ts-loader": "^8.0.14",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.1.0",
+    "typescript": "^4.1.3",
+    "yup": "^0.32.8",
+    "np": "^7.2.0"
   },
   "dependencies": {
-    "global": "^4.4.0",
-    "np": "^7.0.0"
+    "global": "^4.4.0"
   }
 }

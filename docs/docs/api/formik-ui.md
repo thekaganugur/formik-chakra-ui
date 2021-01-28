@@ -166,7 +166,7 @@ RadioGroupControlProps = BaseProps & {
 ### Example
 
 ```jsx
-import { Radio } from "@chakra-ui/react";
+import { Radio } from '@chakra-ui/react';
 import { RadioGroupControl } from 'formik-chakra-ui';
 
 <RadioGroupControl name="favoriteColor" label="Favorite Color">
@@ -264,4 +264,24 @@ type TextareaControlProps = BaseProps & { textareaProps?: TextareaProps };
 import { TextareaControl } from 'formik-chakra-ui';
 
 <TextareaControl name="notes" label="Notes" />;
+```
+
+## Slider
+
+### Type
+
+```typescript
+type SliderControlProps = BaseProps & {
+  sliderProps?: SliderProps;
+  sliderTrackProps?: SliderTrackProps;
+  sliderThumbProps?: SliderThumbProps;
+};
+```
+
+### Example
+
+```jsx
+import { SliderControl } from 'formik-chakra-ui';
+
+<SliderControl name="foo" sliderProps={{ max: 40 }} />;
 ```

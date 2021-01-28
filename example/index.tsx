@@ -5,7 +5,6 @@ import {
   Heading,
   Link,
   Radio,
-  theme,
 } from '@chakra-ui/react';
 import { Formik } from 'formik';
 import * as React from 'react';
@@ -21,6 +20,7 @@ import {
   RadioGroupControl,
   ResetButton,
   SelectControl,
+  SliderControl,
   SubmitButton,
   SwitchControl,
   TextareaControl,
@@ -43,6 +43,7 @@ const initialValues = {
   toppings: ['tuna'],
   notes: '',
   employedd: false,
+  foo: 23,
 };
 const validationSchema = Yup.object({
   firstName: Yup.string().required(),
@@ -55,25 +56,19 @@ const validationSchema = Yup.object({
   toppings: Yup.array().min(2),
   notes: Yup.string().required(),
   employedd: Yup.boolean().equals([true]),
+  foo: Yup.number(),
 });
 
 const App = () => {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider>
       <Heading as="h1" size="xl" textAlign="center">
-        React Final Form
-      </Heading>
-      <Heading as="h2" size="lg" textAlign="center" m={5}>
-        Chakra Example
+        Formik Chakra UI
       </Heading>
       <Box as="p" textAlign="center">
         Example using{' '}
         <Link href="https://github.com/kgnugur/formik-chakra-ui" isExternal>
-          Formik Chakra{' '}
-        </Link>
-        and{' '}
-        <Link href="https://chakra-ui.com" isExternal>
-          Chakra
+          Formik Chakra UI{' '}
         </Link>
       </Box>
 
@@ -134,6 +129,7 @@ const App = () => {
               <option value="option2">Option 2</option>
               <option value="option3">Option 3</option>
             </SelectControl>
+            <SliderControl name="foo" sliderProps={{ max: 40 }} />
 
             <PercentComplete />
             <ButtonGroup>

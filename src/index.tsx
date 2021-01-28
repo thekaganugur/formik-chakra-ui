@@ -17,3 +17,4 @@ export * from './select-control';
 export * from './submit-button';
 export * from './switch-control';
 export * from './textarea-control';
+export * from './slider-control';
