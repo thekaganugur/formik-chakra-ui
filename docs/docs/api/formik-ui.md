@@ -285,3 +285,23 @@ import { SliderControl } from 'formik-chakra-ui';
 
 <SliderControl name="foo" sliderProps={{ max: 40 }} />;
 ```
+
+## PinInput
+
+### Type
+
+```typescript
+type PinInputControlProps = BaseProps & {
+  pinAmount: number;
+  stackProps?: StackProps;
+  pinInputProps?: Omit<PinInputProps, 'children'>;
+};
+```
+
+### Example
+
+```jsx
+import { PinInputControl } from 'formik-chakra-ui';
+
+<PinInputControl name="bar" pinAmount={4} pinInputProps={{ size: 'sm' }} />;
+```

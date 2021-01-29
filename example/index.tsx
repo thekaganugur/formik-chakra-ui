@@ -17,6 +17,7 @@ import {
   InputControl,
   NumberInputControl,
   PercentComplete,
+  PinInputControl,
   RadioGroupControl,
   ResetButton,
   SelectControl,
@@ -44,6 +45,7 @@ const initialValues = {
   notes: '',
   employedd: false,
   foo: 23,
+  bar: '',
 };
 const validationSchema = Yup.object({
   firstName: Yup.string().required(),
@@ -57,6 +59,7 @@ const validationSchema = Yup.object({
   notes: Yup.string().required(),
   employedd: Yup.boolean().equals([true]),
   foo: Yup.number(),
+  bar: Yup.string(),
 });
 
 const App = () => {
@@ -130,6 +133,11 @@ const App = () => {
               <option value="option3">Option 3</option>
             </SelectControl>
             <SliderControl name="foo" sliderProps={{ max: 40 }} />
+            <PinInputControl
+              name="bar"
+              pinAmount={4}
+              pinInputProps={{ size: 'sm' }}
+            />
 
             <PercentComplete />
             <ButtonGroup>
