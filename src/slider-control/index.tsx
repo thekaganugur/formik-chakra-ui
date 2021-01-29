@@ -33,10 +33,20 @@ export const SliderControl: FC<SliderControlProps> = (
   function handleChange(value: number) {
     setValue(value);
   }
+  // Does not behave like expected, so we manually handle it.
+  function handleBlur(e: React.FocusEvent<HTMLDivElement>) {
+    (e.target as any).name = name;
+    field.onBlur(e);
+  }
 
   return (
     <FormControl name={name} label={label} {...rest}>
-      <Slider {...field} onChange={handleChange} {...sliderProps}>
+      <Slider
+        {...field}
+        onChange={handleChange}
+        onBlur={handleBlur}
+        {...sliderProps}
+      >
         <SliderTrack {...sliderTrackProps}>
           <SliderFilledTrack />
         </SliderTrack>

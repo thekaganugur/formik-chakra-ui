@@ -1,4 +1,5 @@
-import { Flex, Switch, SwitchProps } from '@chakra-ui/react';
+import { Box, Flex, Switch, SwitchProps } from '@chakra-ui/react';
+import { css } from '@emotion/react';
 import { useField } from 'formik';
 import React, { FC } from 'react';
 import { BaseProps } from '../base-props';
@@ -13,21 +14,37 @@ export const SwitchControl: FC<SwitchControlProps> = (
   const [field, { error, touched }] = useField(name);
 
   return (
-    <FormControl
-      name={name}
-      label={label}
-      as={Flex}
-      alignItems="center"
-      {...rest}
+    <Box
+      css={css`
+        .chakra-form__label {
+          margin-bottom: 0;
+        }
+        .chakra-switch {
+          display: flex;
+          align-items: center;
+          margin-right: 0.75rem;
+        }
+        .chakra-form__error-message {
+          margin-top: 0;
+        }
+      `}
     >
-      <Switch
-        id={name}
-        isInvalid={!!error && touched}
-        isChecked={field.value}
-        {...field}
-        {...switchProps}
-      />
-    </FormControl>
+      <FormControl
+        name={name}
+        label={label}
+        as={Flex}
+        alignItems="center"
+        {...rest}
+      >
+        <Switch
+          id={name}
+          isInvalid={!!error && touched}
+          isChecked={field.value}
+          {...field}
+          {...switchProps}
+        />
+      </FormControl>
+    </Box>
   );
 };
 

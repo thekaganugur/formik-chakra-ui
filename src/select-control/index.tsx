@@ -17,7 +17,7 @@ export const SelectControl: FC<SelectControlProps> = (
 
   return (
     <FormControl name={name} label={label} {...rest}>
-      <Select id={name} {...field} {...selectProps}>
+      <Select {...field} {...selectProps}>
         {children}
       </Select>
     </FormControl>

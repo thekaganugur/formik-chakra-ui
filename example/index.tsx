@@ -44,6 +44,7 @@ const initialValues = {
   toppings: ['tuna'],
   notes: '',
   employedd: false,
+  select: '',
   foo: 23,
   bar: '',
 };
@@ -58,8 +59,9 @@ const validationSchema = Yup.object({
   toppings: Yup.array().min(2),
   notes: Yup.string().required(),
   employedd: Yup.boolean().equals([true]),
+  select: Yup.string().required(),
   foo: Yup.number(),
-  bar: Yup.string(),
+  bar: Yup.string().length(4),
 });
 
 const App = () => {
@@ -125,7 +127,7 @@ const App = () => {
             <TextareaControl name="notes" label="Notes" />
             <SwitchControl name="employedd" label="Employed" />
             <SelectControl
-              name="notes"
+              name="select"
               selectProps={{ placeholder: 'Select option' }}
             >
               <option value="option1">Option 1</option>
