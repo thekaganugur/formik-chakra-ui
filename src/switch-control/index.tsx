@@ -37,10 +37,10 @@ export const SwitchControl: FC<SwitchControlProps> = (
         {...rest}
       >
         <Switch
+          {...field}
           id={name}
           isInvalid={!!error && touched}
           isChecked={field.value}
-          {...field}
           {...switchProps}
         />
       </FormControl>

@@ -16,7 +16,7 @@ export const TextareaControl: FC<TextareaControlProps> = (
 
   return (
     <FormControl name={name} label={label} {...rest}>
-      <Textarea id={name} {...field} {...textareaProps} />
+      <Textarea {...field} id={name} {...textareaProps} />
     </FormControl>
   );
 };

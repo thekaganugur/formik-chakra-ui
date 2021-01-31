@@ -43,6 +43,7 @@ export const SliderControl: FC<SliderControlProps> = (
     <FormControl name={name} label={label} {...rest}>
       <Slider
         {...field}
+        id={name}
         onChange={handleChange}
         onBlur={handleBlur}
         {...sliderProps}

@@ -95,7 +95,7 @@ const App = () => {
           >
             <InputControl name="firstName" label="First Name" />
             <InputControl name="lastName" label="Last Name" />
-            <NumberInputControl name="age" label="Last Name" />
+            <NumberInputControl name="age" label="Age" />
             <CheckboxSingleControl name="employed">
               Employed
             </CheckboxSingleControl>
@@ -127,6 +127,7 @@ const App = () => {
             <TextareaControl name="notes" label="Notes" />
             <SwitchControl name="employedd" label="Employed" />
             <SelectControl
+              label="Select label"
               name="select"
               selectProps={{ placeholder: 'Select option' }}
             >

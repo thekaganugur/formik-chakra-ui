@@ -19,10 +19,10 @@ export const CheckboxSingleControl: FC<CheckboxSingleProps> = (
   return (
     <FormControl name={name} {...rest}>
       <Checkbox
+        {...field}
         id={name}
         isInvalid={!!error && touched}
         isChecked={isChecked}
-        {...field}
         {...checkBoxProps}
       >
         {label}

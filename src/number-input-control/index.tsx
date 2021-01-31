@@ -38,11 +38,12 @@ export const NumberInputControl: FC<NumberInputControlProps> = (
     <FormControl name={name} label={label} {...rest}>
       <NumberInput
         {...field}
+        id={name}
         onChange={$setFieldValue(name)}
         isInvalid={!!error && touched}
         {...numberInputProps}
       >
-        <NumberInputField id={name} name={name} />
+        <NumberInputField name={name} />
         {showStepper && (
           <NumberInputStepper>
             <NumberIncrementStepper />

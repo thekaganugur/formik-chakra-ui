@@ -21,10 +21,10 @@ export const CheckboxControl: FC<CheckboxControlProps> = (
 
   return (
     <Checkbox
+      {...field}
       id={name}
       isInvalid={!!error && touched}
       isChecked={isChecked}
-      {...field}
       {...rest}
     >
       {label}
