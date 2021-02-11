@@ -105,23 +105,23 @@ const App = () => {
               <Radio value="#0000ff">Blue</Radio>
             </RadioGroupControl>
             <CheckboxContainer name="toppings" label="Toppings">
-              <CheckboxControl name="toppings" value="chicken">
-                🐓 Chicken
+              <CheckboxControl name="toppings1" value="chicken">
+                Chicken
               </CheckboxControl>
               <CheckboxControl name="toppings" value="ham">
-                🐷 Ham
+                Ham
               </CheckboxControl>
               <CheckboxControl name="toppings" value="mushrooms">
-                🍄 Mushrooms
+                Mushrooms
               </CheckboxControl>
               <CheckboxControl name="toppings" value="cheese">
-                🧀 Cheese
+                Cheese
               </CheckboxControl>
               <CheckboxControl name="toppings" value="tuna">
-                🐟 Tuna
+                Tuna
               </CheckboxControl>
               <CheckboxControl name="toppings" value="pineapple">
-                🍍 Pineapple
+                Pineapple
               </CheckboxControl>
             </CheckboxContainer>
             <TextareaControl name="notes" label="Notes" />

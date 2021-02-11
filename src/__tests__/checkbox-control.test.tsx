@@ -5,7 +5,7 @@ import * as React from 'react';
 import { CheckboxControl } from '../form-checkbox';
 
 test('CheckboxControl Renders Correctly', () => {
-  const { asFragment } = render(
+  const { asFragment, getByRole } = render(
     <Formik onSubmit={() => {}} initialValues={{ test: false }}>
       <Form>
         <ChakraProvider>
@@ -17,5 +17,6 @@ test('CheckboxControl Renders Correctly', () => {
     </Formik>
   );
 
+  getByRole('checkbox', { name: /test label/i });
   expect(asFragment()).toMatchSnapshot();
 });
