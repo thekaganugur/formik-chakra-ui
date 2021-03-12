@@ -95,7 +95,11 @@ const App = () => {
           >
             <InputControl name="firstName" label="First Name" />
             <InputControl name="lastName" label="Last Name" />
-            <NumberInputControl name="age" label="Age" />
+            <NumberInputControl
+              name="age"
+              label="Age"
+              helperText="Helper text"
+            />
             <CheckboxSingleControl name="employed">
               Employed
             </CheckboxSingleControl>

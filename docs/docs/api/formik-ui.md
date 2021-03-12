@@ -9,6 +9,7 @@ title: Formik UI
 interface BaseProps extends FormControlProps {
   name: string;
   label?: string;
+  helperText?: string;
 }
 ```
 

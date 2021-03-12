@@ -1,18 +1,21 @@
 import {
   FormControl as ChakraFormControl,
-  FormControlProps as ChakraFormControlProps,
+  FormControlProps,
   FormErrorMessage,
+  FormHelperText,
   FormLabel,
 } from '@chakra-ui/react';
 import { useField } from 'formik';
 import React, { FC } from 'react';
-import { BaseProps } from '../base-props';
 
-export type FormControlProps = Omit<BaseProps, 'label'> &
-  ChakraFormControlProps & { label?: string };
+export interface BaseProps extends FormControlProps {
+  name: string;
+  label?: string;
+  helperText?: string;
+}
 
-export const FormControl: FC<FormControlProps> = (props: FormControlProps) => {
-  const { children, name, label, ...rest } = props;
+export const FormControl: FC<BaseProps> = (props: BaseProps) => {
+  const { children, name, label, helperText, ...rest } = props;
   const [, { error, touched }] = useField(name);
 
   return (
@@ -20,6 +23,7 @@ export const FormControl: FC<FormControlProps> = (props: FormControlProps) => {
       {label && <FormLabel htmlFor={name}>{label}</FormLabel>}
       {children}
       {error && <FormErrorMessage>{error}</FormErrorMessage>}
+      {helperText && <FormHelperText>{helperText}</FormHelperText>}
     </ChakraFormControl>
   );
 };

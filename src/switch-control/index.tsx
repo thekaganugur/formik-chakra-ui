@@ -2,8 +2,7 @@ import { Box, Flex, Switch, SwitchProps } from '@chakra-ui/react';
 import { css } from '@emotion/react';
 import { useField } from 'formik';
 import React, { FC } from 'react';
-import { BaseProps } from '../base-props';
-import { FormControl } from '../form-control';
+import { BaseProps, FormControl } from '../form-control';
 
 export type SwitchControlProps = BaseProps & { switchProps?: SwitchProps };
 

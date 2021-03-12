@@ -8,8 +8,7 @@ import {
 } from '@chakra-ui/react';
 import { useField, useFormikContext } from 'formik';
 import React, { FC, ReactNode } from 'react';
-import { BaseProps } from '../base-props';
-import { FormControl } from '../form-control';
+import { BaseProps, FormControl } from '../form-control';
 
 export type NumberInputControlProps = BaseProps & {
   numberInputProps?: NumberInputProps;

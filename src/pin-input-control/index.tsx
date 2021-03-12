@@ -7,8 +7,7 @@ import {
 } from '@chakra-ui/react';
 import { useField } from 'formik';
 import React, { FC } from 'react';
-import { BaseProps } from '../base-props';
-import { FormControl } from '../form-control';
+import { BaseProps, FormControl } from '../form-control';
 
 export type PinInputControlProps = BaseProps & {
   pinAmount: number;
