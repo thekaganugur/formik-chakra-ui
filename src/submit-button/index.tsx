@@ -7,17 +7,11 @@ export type SubmitButtonProps = ButtonProps;
 export const SubmitButton: FC<SubmitButtonProps> = (
   props: SubmitButtonProps
 ) => {
-  const { children, mt = 4, ...rest } = props;
+  const { children, ...rest } = props;
   const { isSubmitting } = useFormikContext();
 
   return (
-    <Button
-      type="submit"
-      isLoading={isSubmitting}
-      colorScheme="teal"
-      mt={mt}
-      {...rest}
-    >
+    <Button type="submit" isLoading={isSubmitting} colorScheme="teal" {...rest}>
       {children}
     </Button>
   );

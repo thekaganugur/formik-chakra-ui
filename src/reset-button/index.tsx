@@ -5,7 +5,7 @@ import React, { FC } from 'react';
 export type ResetButtonProps = ButtonProps;
 
 export const ResetButton: FC<ResetButtonProps> = (props: ResetButtonProps) => {
-  const { children, my = 4, ...rest } = props;
+  const { children, ...rest } = props;
   const { isSubmitting, dirty, resetForm } = useFormikContext();
 
   return (
@@ -14,9 +14,9 @@ export const ResetButton: FC<ResetButtonProps> = (props: ResetButtonProps) => {
       variant="outline"
       onClick={() => resetForm()}
       isDisabled={isSubmitting || !dirty}
-      my={my}
       {...rest}
     >
+      {/* TODO: This is not needed. */}
       {children}
     </Button>
   );

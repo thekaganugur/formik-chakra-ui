@@ -10,7 +10,7 @@ Bindings for using [Formik](https://github.com/jaredpalmer/formik) with [Chakra 
 [Inversion of Control](https://kentcdodds.com/blog/inversion-of-control) is
 really cool and [Compound Components](https://kentcdodds.com/blog/inversion-of-control#compound-components) do provide really flexible API.
 
-Yet this library is opinionated, provides bindings for Formik, with necessary paddings etc. You can easily opt-out continue to use Chakra UI if you need custom components. But this library will support %90 of the use-cases when building and form.
+Yet this library is opinionated, provides bindings for Formik, with necessary paddings etc. You can easily opt-out continue to use Chakra UI if you need custom components. But this library will support %90 of the use-cases when building forms.
 
 ## Getting started
 
