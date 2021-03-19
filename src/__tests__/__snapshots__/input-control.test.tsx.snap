@@ -6,11 +6,11 @@ exports[`Input Renders Correctly 1`] = `
     action="#"
   >
     <div
-      class="chakra-form-control css-1kxonj9"
+      class="chakra-form-control css-oujskm"
       role="group"
     >
       <input
-        class="chakra-input css-0"
+        class="chakra-input css-1u8qly9"
         id="test"
         name="test"
         value="Input"

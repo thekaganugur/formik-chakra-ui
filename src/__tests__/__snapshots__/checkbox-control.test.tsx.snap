@@ -6,7 +6,7 @@ exports[`CheckboxControl Renders Correctly 1`] = `
     action="#"
   >
     <label
-      class="chakra-checkbox css-dfdulk"
+      class="chakra-checkbox css-jc7en5"
     >
       <input
         aria-invalid="false"
@@ -16,15 +16,15 @@ exports[`CheckboxControl Renders Correctly 1`] = `
         type="checkbox"
         value="test-value"
       />
-      <div
+      <span
         aria-hidden="true"
-        class="chakra-checkbox__control css-co2d90"
+        class="chakra-checkbox__control css-g372dr"
       />
-      <div
-        class="chakra-checkbox__label css-sklcna"
+      <span
+        class="chakra-checkbox__label css-1iwbtsf"
       >
         Test Label
-      </div>
+      </span>
     </label>
   </form>
 </DocumentFragment>
