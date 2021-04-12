@@ -20,7 +20,7 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: Use cached node_modules
-        uses: actions/cache@v2.1.4
+        uses: actions/cache@v2
         with:
           path: node_modules
           key: nodeModules-${{ hashFiles('**/yarn.lock') }}
