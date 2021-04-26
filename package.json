@@ -58,7 +58,7 @@
     "@types/yup": "^0.29.11",
     "babel-loader": "^8.2.2",
     "formik": "^2.2.6",
-    "framer-motion": "3.10.6",
+    "framer-motion": "4.1.9",
     "husky": "^4.3.8",
     "np": "^7.4.0",
     "react": "^16.13.1",
