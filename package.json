@@ -28,7 +28,8 @@
     "test:watch": "tsdx test --watch --passWithNoTests",
     "test:u": "tsdx test --passWithNoTests -u",
     "lint": "tsdx lint",
-    "prepare": "tsdx build"
+    "prepare": "tsdx build",
+    "docs": "typedoc"
   },
   "peerDependencies": {
     "react": ">=17"
@@ -68,6 +69,7 @@
     "ts-loader": "^9.1.2",
     "tsdx": "^0.14.1",
     "tslib": "^2.2.0",
+    "typedoc": "^0.20.36",
     "typescript": "^4.2.4",
     "yup": "^0.32.9"
   }

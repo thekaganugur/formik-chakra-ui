@@ -15,5 +15,9 @@
     "moduleResolution": "node",
     "jsx": "react",
     "esModuleInterop": true
+  },
+  "typedocOptions": {
+    "entryPoints": ["src/index.tsx"],
+    "out": "docs-ts"
   }
 }
