@@ -61,7 +61,7 @@
     "framer-motion": "3.10.6",
     "husky": "^4.3.8",
     "np": "^7.4.0",
-    "react": "^16.13.1",
+    "react": "^17.0.2",
     "react-docgen-typescript-loader": "^3.7.2",
     "react-dom": "^17.0.1",
     "react-is": "^17.0.1",
