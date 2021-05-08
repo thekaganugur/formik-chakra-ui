@@ -18,6 +18,7 @@
   },
   "typedocOptions": {
     "entryPoints": ["src/index.tsx"],
-    "out": "docs-ts"
+    "out": "docs-ts",
+    "readme": "none"
   }
 }
