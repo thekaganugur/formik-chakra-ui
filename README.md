@@ -39,7 +39,7 @@ function App() {
 
 ## Documentation
 
-All documentation can be found [here](https://angry-einstein-b7909a.netlify.app/docs/api/formik-ui/)
+All documentation can be found [here](https://happy-lovelace-6f257c.netlify.app/)
 
 ## Example
 

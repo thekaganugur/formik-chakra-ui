@@ -1,4 +1,0 @@
----
-id: faq
-title: FAQ
----
