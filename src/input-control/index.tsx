@@ -8,7 +8,7 @@ export type InputControlProps = BaseProps & { inputProps?: InputProps } & { syst
 export const InputControl: FC<InputControlProps> = (
   props: InputControlProps
 ) => {
-  const { name, label, inputProps, ...rest } = props;
+  const { name, label, inputProps, systemProps, ...rest } = props;
   const [field] = useField(name);
 
   return (
