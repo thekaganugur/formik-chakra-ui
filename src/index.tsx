@@ -1,4 +1,5 @@
 export * from './form-checkbox';
+export * from './form-control';
 export * from './input-control';
 export * from './number-input-control';
 export * from './percent-complete';
