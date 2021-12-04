@@ -3,10 +3,12 @@ import {
   ButtonGroup,
   ChakraProvider,
   Heading,
+  Input,
   Link,
   Radio,
+  Stack,
 } from '@chakra-ui/react';
-import { Formik } from 'formik';
+import { Field, Formik } from 'formik';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import * as Yup from 'yup';
@@ -14,6 +16,7 @@ import {
   CheckboxContainer,
   CheckboxControl,
   CheckboxSingleControl,
+  FormControl,
   InputControl,
   NumberInputControl,
   PercentComplete,
@@ -47,6 +50,7 @@ const initialValues = {
   select: '',
   foo: 23,
   bar: '',
+  customField: '',
 };
 const validationSchema = Yup.object({
   firstName: Yup.string().required(),
@@ -62,6 +66,7 @@ const validationSchema = Yup.object({
   select: Yup.string().required(),
   foo: Yup.number(),
   bar: Yup.string().length(4),
+  customField: Yup.string().required(),
 });
 
 const App = () => {
@@ -83,7 +88,8 @@ const App = () => {
         validationSchema={validationSchema}
       >
         {({ handleSubmit, values, errors }) => (
-          <Box
+          <Stack
+            spacing={5}
             borderWidth="1px"
             rounded="lg"
             shadow="1px 1px 3px rgba(0,0,0,0.3)"
@@ -147,6 +153,17 @@ const App = () => {
             />
 
             <PercentComplete />
+            <FormControl
+              name="customField"
+              label="Custom FormControl"
+              helperText="Helper text"
+            >
+              <Field
+                as={Input}
+                name="customField"
+                placeholder="A custom field"
+              />
+            </FormControl>
             <ButtonGroup>
               <SubmitButton>Submit</SubmitButton>
               <ResetButton>Reset</ResetButton>
@@ -157,7 +174,7 @@ const App = () => {
               <br />
               {JSON.stringify(errors, null, 2)}
             </Box>
-          </Box>
+          </Stack>
         )}
       </Formik>
     </ChakraProvider>
