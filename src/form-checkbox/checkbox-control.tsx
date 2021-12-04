@@ -1,6 +1,6 @@
 import { Checkbox, CheckboxProps } from '@chakra-ui/react';
 import { useField } from 'formik';
-import React from 'react';
+import React, { FC } from 'react';
 
 type Overwrite<T, U> = Pick<T, Exclude<keyof T, keyof U>> & U;
 
@@ -9,7 +9,7 @@ export type CheckboxControlProps = Overwrite<
   { value: string | number }
 > & { name: string; label?: string };
 
-export const CheckboxControl: React.FC<CheckboxControlProps> = React.forwardRef(
+export const CheckboxControl: FC<CheckboxControlProps> = React.forwardRef(
   (props: CheckboxControlProps, ref: React.ForwardedRef<HTMLInputElement>) => {
     const { name, label, children, ...rest } = props;
     const [field, { error, touched }] = useField(name);

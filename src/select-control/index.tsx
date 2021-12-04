@@ -1,6 +1,6 @@
 import { Select, SelectProps } from '@chakra-ui/react';
 import { useField } from 'formik';
-import React from 'react';
+import React, { FC } from 'react';
 import { BaseProps, FormControl } from '../form-control';
 
 export type SelectControlProps = BaseProps & {
@@ -8,7 +8,7 @@ export type SelectControlProps = BaseProps & {
   children: React.ReactNode;
 };
 
-export const SelectControl: React.FC<SelectControlProps> = React.forwardRef(
+export const SelectControl: FC<SelectControlProps> = React.forwardRef(
   (props: SelectControlProps, ref: React.ForwardedRef<HTMLSelectElement>) => {
     const { name, label, selectProps, children, ...rest } = props;
     const [field] = useField(name);

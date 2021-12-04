@@ -1,12 +1,12 @@
 import { Box, Flex, Switch, SwitchProps } from '@chakra-ui/react';
 import { css } from '@emotion/react';
 import { useField } from 'formik';
-import React from 'react';
+import React, { FC } from 'react';
 import { BaseProps, FormControl } from '../form-control';
 
 export type SwitchControlProps = BaseProps & { switchProps?: SwitchProps };
 
-export const SwitchControl: React.FC<SwitchControlProps> = React.forwardRef(
+export const SwitchControl: FC<SwitchControlProps> = React.forwardRef(
   (props: SwitchControlProps, ref: React.ForwardedRef<HTMLInputElement>) => {
     const { name, label, switchProps, ...rest } = props;
     const [field, { error, touched }] = useField(name);

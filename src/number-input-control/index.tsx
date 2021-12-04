@@ -7,7 +7,7 @@ import {
   NumberInputStepper,
 } from '@chakra-ui/react';
 import { useField, useFormikContext } from 'formik';
-import React from 'react';
+import React, { FC } from 'react';
 import { BaseProps, FormControl } from '../form-control';
 
 export type NumberInputControlProps = BaseProps & {
@@ -16,7 +16,7 @@ export type NumberInputControlProps = BaseProps & {
   children?: React.ReactNode;
 };
 
-export const NumberInputControl: React.FC<NumberInputControlProps> = React.forwardRef(
+export const NumberInputControl: FC<NumberInputControlProps> = React.forwardRef(
   (
     props: NumberInputControlProps,
     ref: React.ForwardedRef<HTMLInputElement>
