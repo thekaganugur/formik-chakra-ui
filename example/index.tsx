@@ -51,6 +51,7 @@ const initialValues = {
   foo: 23,
   bar: '',
   customField: '',
+  customElements: '',
 };
 const validationSchema = Yup.object({
   firstName: Yup.string().required(),
@@ -67,6 +68,7 @@ const validationSchema = Yup.object({
   foo: Yup.number(),
   bar: Yup.string().length(4),
   customField: Yup.string().required(),
+  customElements: Yup.string().required(),
 });
 
 const App = () => {
@@ -164,6 +166,14 @@ const App = () => {
                 placeholder="A custom field"
               />
             </FormControl>
+            <InputControl
+              name="customElements"
+              label="Custom elements"
+              labelProps={{ color: 'blue' }}
+              errorMessageProps={{ fontWeight: 'bold' }}
+              helperText="Helper text"
+              helperTextProps={{ fontStyle: 'italic' }}
+            />
             <ButtonGroup>
               <SubmitButton>Submit</SubmitButton>
               <ResetButton>Reset</ResetButton>
