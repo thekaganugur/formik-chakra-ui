@@ -15,7 +15,7 @@ export interface BaseProps extends FormControlProps {
   name: string;
   label?: string;
   labelProps?: FormLabelProps;
-  helperText?: string;
+  helperText?: React.ReactNode;
   helperTextProps?: HelpTextProps;
   errorMessageProps?: FormErrorMessageProps;
 }
