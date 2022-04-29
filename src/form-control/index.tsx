@@ -44,8 +44,10 @@ export const FormControl: FC<BaseProps> = (props: BaseProps) => {
       {error && (
         <FormErrorMessage {...errorMessageProps}>{error}</FormErrorMessage>
       )}
-      {helperText && (
+      {helperText && typeof helperText === 'string' ? (
         <FormHelperText {...helperTextProps}>{helperText}</FormHelperText>
+      ) : (
+        helperText
       )}
     </ChakraFormControl>
   );
