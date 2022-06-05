@@ -39,19 +39,18 @@ function App() {
 
 ## Documentation
 
-All documentation can be found [here](https://happy-lovelace-6f257c.netlify.app/)
+All documentation can be found [here](https://629c67f66924e51a45fb2029--gregarious-marshmallow-00a41c.netlify.app/)
 
 ## Example
 
 [Codesandbox example](https://codesandbox.io/s/formik-chakra-ui-27yzm?file=/src/Form.tsx)
 
-## Progress
+## Roadmap
 
 ### Components
 
 - [x] Button
 - [x] Checkbox
-- [ ] Editable 👀
 - [x] Input
 - [x] Number Input
 - [x] Pin Input
