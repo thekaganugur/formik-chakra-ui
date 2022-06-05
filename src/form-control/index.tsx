@@ -11,11 +11,11 @@ import {
 import { useField } from 'formik';
 import React, { FC } from 'react';
 
-export interface BaseProps extends FormControlProps {
+export interface BaseProps extends Omit<FormControlProps, 'label'> {
   name: string;
-  label?: string;
+  label?: React.ReactNode;
   labelProps?: FormLabelProps;
-  helperText?: string;
+  helperText?: React.ReactNode;
   helperTextProps?: HelpTextProps;
   errorMessageProps?: FormErrorMessageProps;
 }
@@ -35,17 +35,21 @@ export const FormControl: FC<BaseProps> = (props: BaseProps) => {
 
   return (
     <ChakraFormControl isInvalid={!!error && touched} {...rest}>
-      {label && (
+      {label && typeof label === 'string' ? (
         <FormLabel htmlFor={name} {...labelProps}>
           {label}
         </FormLabel>
+      ) : (
+        label
       )}
       {children}
       {error && (
         <FormErrorMessage {...errorMessageProps}>{error}</FormErrorMessage>
       )}
-      {helperText && (
+      {helperText && typeof helperText === 'string' ? (
         <FormHelperText {...helperTextProps}>{helperText}</FormHelperText>
+      ) : (
+        helperText
       )}
     </ChakraFormControl>
   );
