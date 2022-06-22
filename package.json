@@ -59,7 +59,7 @@
     "@types/yup": "^0.29.11",
     "babel-loader": "^8.2.2",
     "formik": "^2.2.6",
-    "framer-motion": "4.1.13",
+    "framer-motion": "6.3.12",
     "husky": "^6.0.0",
     "np": "^7.5.0",
     "react": "^17.0.2",
