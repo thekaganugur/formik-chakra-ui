@@ -30,6 +30,11 @@ import {
   TextareaControl,
 } from '../src';
 
+import MailIcon from './mail.svg';
+import LockIcon from './lock.svg';
+import EyeOpen from './eyeopen.svg';
+import EyeClose from './eyeclose.svg';
+
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const onSubmit = values => {
@@ -52,10 +57,16 @@ const initialValues = {
   bar: '',
   customField: '',
   customElements: '',
+  email: '',
+  password: '',
+  website: '',
 };
 const validationSchema = Yup.object({
   firstName: Yup.string().required(),
   lastName: Yup.string().required(),
+  email: Yup.string().required(),
+  password: Yup.string().required(),
+  website: Yup.string().required(),
   age: Yup.number()
     .required()
     .min(18),
@@ -71,7 +82,14 @@ const validationSchema = Yup.object({
   customElements: Yup.string().required(),
 });
 
+const iconProps = {
+  width: '30px',
+  height: '30px',
+};
+
 const App = () => {
+  const [revealPassword, setRevealPassword] = React.useState(false);
+  const toggleReveal = () => setRevealPassword(prev => !prev);
   return (
     <ChakraProvider>
       <Heading as="h1" size="xl" textAlign="center">
@@ -107,6 +125,32 @@ const App = () => {
               name="age"
               label="Age"
               helperText="Helper text"
+            />
+            <InputControl
+              inputProps={{ type: 'email', paddingLeft:"38px" }}
+              name="email"
+              label="Email"
+              leftChildren={<MailIcon {...iconProps} />}
+            />
+            <InputControl
+              inputProps={{ type: revealPassword ? 'text' : 'password', paddingLeft:"38px" }}
+              name="password"
+              label="password"
+              leftChildren={<LockIcon {...iconProps} />}
+              rightChildren={
+                revealPassword ? (
+                  <EyeClose onClick={toggleReveal} {...iconProps} />
+                ) : (
+                  <EyeOpen onClick={toggleReveal} {...iconProps} />
+                )
+              }
+            />
+            <InputControl
+              name="website"
+              placeholder="mysite"
+              leftChildren={'https://'}
+              rightChildren={'.com'}
+              useAddon={{ left: true, right: true }}
             />
             <CheckboxSingleControl name="employed">
               Employed
