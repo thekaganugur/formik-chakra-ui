@@ -72,5 +72,8 @@
     "typedoc": "^0.20.36",
     "typescript": "^4.2.4",
     "yup": "^0.32.9"
+  },
+  "resolutions": {
+    "csstype": "3.0.10"
   }
 }
