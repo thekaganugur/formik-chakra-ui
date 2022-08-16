@@ -12,7 +12,16 @@
     "strictNullChecks": true,
     "preserveConstEnums": true,
     "sourceMap": true,
-    "lib": ["es2015", "es2016", "dom"],
-    "types": ["node"]
-  }
+    "lib": [
+      "es2015",
+      "es2016",
+      "dom"
+    ],
+    "types": [
+      "node"
+    ],
+  },
+  "include": [
+    "svg.d.ts"
+  ]
 }
