@@ -118,13 +118,13 @@ const App = () => {
               helperText="Helper text"
             />
             <InputControl
-             
+             inputProps={{ type:"email"}}
               name="email"
               label="Email"
               leftChildren={<MailIcon width="30px" height="30px" />}
             />
             <InputControl
-             
+               inputProps={{ type:"password"}}
               name="password"
               label="password"
               leftChildren={<LockIcon width="30px" height="30px" />}
