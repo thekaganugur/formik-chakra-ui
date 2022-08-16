@@ -30,8 +30,10 @@ import {
   TextareaControl,
 } from '../src';
 
-import MailIcon  from './mail.svg';
+import MailIcon from './mail.svg';
 import LockIcon from './lock.svg';
+import EyeOpen from './eyeopen.svg';
+import EyeClose from './eyeclose.svg';
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -55,16 +57,16 @@ const initialValues = {
   bar: '',
   customField: '',
   customElements: '',
-  email:'',
-  password:'',
-  website:''
+  email: '',
+  password: '',
+  website: '',
 };
 const validationSchema = Yup.object({
   firstName: Yup.string().required(),
   lastName: Yup.string().required(),
-  email:Yup.string().required(),
-  password:Yup.string().required(),
-  website:Yup.string().required(),
+  email: Yup.string().required(),
+  password: Yup.string().required(),
+  website: Yup.string().required(),
   age: Yup.number()
     .required()
     .min(18),
@@ -80,7 +82,14 @@ const validationSchema = Yup.object({
   customElements: Yup.string().required(),
 });
 
+const iconProps = {
+  width: '30px',
+  height: '30px',
+};
+
 const App = () => {
+  const [revealPassword, setRevealPassword] = React.useState(false);
+  const toggleReveal = () => setRevealPassword(prev => !prev);
   return (
     <ChakraProvider>
       <Heading as="h1" size="xl" textAlign="center">
@@ -118,16 +127,23 @@ const App = () => {
               helperText="Helper text"
             />
             <InputControl
-             inputProps={{ type:"email"}}
+              inputProps={{ type: 'email', paddingLeft:"38px" }}
               name="email"
               label="Email"
-              leftChildren={<MailIcon width="30px" height="30px" />}
+              leftChildren={<MailIcon {...iconProps} />}
             />
             <InputControl
-               inputProps={{ type:"password"}}
+              inputProps={{ type: revealPassword ? 'text' : 'password', paddingLeft:"38px" }}
               name="password"
               label="password"
-              leftChildren={<LockIcon width="30px" height="30px" />}
+              leftChildren={<LockIcon {...iconProps} />}
+              rightChildren={
+                revealPassword ? (
+                  <EyeClose onClick={toggleReveal} {...iconProps} />
+                ) : (
+                  <EyeOpen onClick={toggleReveal} {...iconProps} />
+                )
+              }
             />
             <InputControl
               name="website"
