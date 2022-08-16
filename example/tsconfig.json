@@ -20,8 +20,5 @@
     "types": [
       "node"
     ],
-  },
-  "include": [
-    "svg.d.ts"
-  ]
+  }
 }
