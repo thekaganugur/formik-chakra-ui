@@ -30,6 +30,9 @@ import {
   TextareaControl,
 } from '../src';
 
+import MailIcon  from './mail.svg';
+import LockIcon from './lock.svg';
+
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const onSubmit = values => {
@@ -52,10 +55,16 @@ const initialValues = {
   bar: '',
   customField: '',
   customElements: '',
+  email:'',
+  password:'',
+  website:''
 };
 const validationSchema = Yup.object({
   firstName: Yup.string().required(),
   lastName: Yup.string().required(),
+  email:Yup.string().required(),
+  password:Yup.string().required(),
+  website:Yup.string().required(),
   age: Yup.number()
     .required()
     .min(18),
@@ -107,6 +116,25 @@ const App = () => {
               name="age"
               label="Age"
               helperText="Helper text"
+            />
+            <InputControl
+             
+              name="email"
+              label="Email"
+              leftChildren={<MailIcon width="30px" height="30px" />}
+            />
+            <InputControl
+             
+              name="password"
+              label="password"
+              leftChildren={<LockIcon width="30px" height="30px" />}
+            />
+            <InputControl
+              name="website"
+              placeholder="mysite"
+              leftChildren={'https://'}
+              rightChildren={'.com'}
+              useAddon={{ left: true, right: true }}
             />
             <CheckboxSingleControl name="employed">
               Employed
