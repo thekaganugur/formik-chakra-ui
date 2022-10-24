@@ -1,5 +1,5 @@
 import { Textarea, TextareaProps } from '@chakra-ui/react';
-import { useField } from 'formik';
+import { useField, useFormikContext } from 'formik';
 import React, { FC } from 'react';
 import { BaseProps, FormControl } from '../form-control';
 
@@ -14,10 +14,17 @@ export const TextareaControl: FC<TextareaControlProps> = React.forwardRef(
   ) => {
     const { name, label, textareaProps, ...rest } = props;
     const [field] = useField(name);
+    const { isSubmitting } = useFormikContext();
 
     return (
       <FormControl name={name} label={label} {...rest}>
-        <Textarea {...field} id={name} ref={ref} {...textareaProps} />
+        <Textarea
+          {...field}
+          id={name}
+          isDisabled={isSubmitting}
+          ref={ref}
+          {...textareaProps}
+        />
       </FormControl>
     );
   }

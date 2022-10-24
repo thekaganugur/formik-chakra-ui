@@ -5,7 +5,7 @@ import {
   PinInputProps,
   StackProps,
 } from '@chakra-ui/react';
-import { useField } from 'formik';
+import { useField, useFormikContext } from 'formik';
 import React, { FC } from 'react';
 import { BaseProps, FormControl } from '../form-control';
 
@@ -20,9 +20,11 @@ export const PinInputControl: FC<PinInputControlProps> = (
 ) => {
   const { name, label, pinAmount, stackProps, pinInputProps, ...rest } = props;
   const [field, , { setValue }] = useField(name);
-  const renderedPinInputFields = Array(pinAmount).fill(null).map((_noop, i) => (
-    <PinInputField key={i} />
-  ));
+  const { isSubmitting } = useFormikContext();
+
+  const renderedPinInputFields = Array(pinAmount)
+    .fill(null)
+    .map((_noop, i) => <PinInputField key={i} />);
   function handleChange(value: string) {
     setValue(value);
   }
@@ -30,7 +32,12 @@ export const PinInputControl: FC<PinInputControlProps> = (
   return (
     <FormControl name={name} label={label} {...rest}>
       <HStack {...stackProps}>
-        <PinInput {...field} onChange={handleChange} {...pinInputProps}>
+        <PinInput
+          {...field}
+          onChange={handleChange}
+          isDisabled={isSubmitting}
+          {...pinInputProps}
+        >
           {renderedPinInputFields}
         </PinInput>
       </HStack>
