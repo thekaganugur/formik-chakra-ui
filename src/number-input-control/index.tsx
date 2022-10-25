@@ -30,7 +30,7 @@ export const NumberInputControl: FC<NumberInputControlProps> = React.forwardRef(
       ...rest
     } = props;
     const [field, { error, touched }] = useField(name);
-    const { setFieldValue } = useFormikContext();
+    const { setFieldValue, isSubmitting } = useFormikContext();
 
     const $setFieldValue = (name: string) => (value: any) =>
       setFieldValue(name, value);
@@ -42,6 +42,7 @@ export const NumberInputControl: FC<NumberInputControlProps> = React.forwardRef(
           id={name}
           onChange={$setFieldValue(name)}
           isInvalid={!!error && touched}
+          isDisabled={isSubmitting}
           {...numberInputProps}
         >
           <NumberInputField name={name} ref={ref} />

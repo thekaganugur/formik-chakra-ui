@@ -19,14 +19,19 @@ export const RadioGroupControl: FC<RadioGroupControlProps> = (
 ) => {
   const { name, label, radioGroupProps, stackProps, children, ...rest } = props;
   const [field] = useField(name);
-  const { setFieldValue } = useFormikContext();
+  const { setFieldValue, isSubmitting } = useFormikContext();
   const handleChange = (value: string) => {
     setFieldValue(name, value);
   };
 
   return (
     <FormControl name={name} label={label} {...rest}>
-      <RadioGroup {...field} onChange={handleChange} {...radioGroupProps}>
+      <RadioGroup
+        {...field}
+        onChange={handleChange}
+        isDisabled={isSubmitting}
+        {...radioGroupProps}
+      >
         <Stack direction="row" {...stackProps}>
           {children}
         </Stack>

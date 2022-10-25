@@ -7,7 +7,7 @@ import {
   SliderTrack,
   SliderTrackProps,
 } from '@chakra-ui/react';
-import { useField } from 'formik';
+import { useField, useFormikContext } from 'formik';
 import React, { FC } from 'react';
 import { BaseProps, FormControl } from '../form-control';
 
@@ -29,6 +29,8 @@ export const SliderControl: FC<SliderControlProps> = (
     ...rest
   } = props;
   const [field, , { setValue }] = useField(name);
+  const { isSubmitting } = useFormikContext();
+
   function handleChange(value: number) {
     setValue(value);
   }
@@ -45,6 +47,7 @@ export const SliderControl: FC<SliderControlProps> = (
         id={name}
         onChange={handleChange}
         onBlur={handleBlur}
+        isDisabled={isSubmitting}
         {...sliderProps}
       >
         <SliderTrack {...sliderTrackProps}>
