@@ -61,7 +61,7 @@
     "babel-loader": "^8.2.2",
     "formik": "^2.2.6",
     "framer-motion": "4.1.13",
-    "husky": "^6.0.0",
+    "husky": "^8.0.2",
     "np": "^7.5.0",
     "react": "^17.0.2",
     "react-docgen-typescript-loader": "^3.7.2",
