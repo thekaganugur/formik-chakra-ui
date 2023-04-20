@@ -6,6 +6,7 @@ import {
   SliderThumbProps,
   SliderTrack,
   SliderTrackProps,
+  SliderInnerTrackProps,
 } from '@chakra-ui/react';
 import { useField, useFormikContext } from 'formik';
 import React, { FC } from 'react';
@@ -15,6 +16,7 @@ export type SliderControlProps = BaseProps & {
   sliderProps?: SliderProps;
   sliderTrackProps?: SliderTrackProps;
   sliderThumbProps?: SliderThumbProps;
+  sliderFilledTrackProps?: SliderInnerTrackProps;
 };
 
 export const SliderControl: FC<SliderControlProps> = (
@@ -26,6 +28,7 @@ export const SliderControl: FC<SliderControlProps> = (
     sliderProps,
     sliderTrackProps,
     sliderThumbProps,
+    sliderFilledTrackProps,
     ...rest
   } = props;
   const [field, , { setValue }] = useField(name);
@@ -51,7 +54,7 @@ export const SliderControl: FC<SliderControlProps> = (
         {...sliderProps}
       >
         <SliderTrack {...sliderTrackProps}>
-          <SliderFilledTrack />
+          <SliderFilledTrack {...sliderFilledTrackProps} />
         </SliderTrack>
         <SliderThumb {...sliderThumbProps} />
       </Slider>
