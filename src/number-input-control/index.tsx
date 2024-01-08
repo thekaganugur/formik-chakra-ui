@@ -27,6 +27,7 @@ export const NumberInputControl: FC<NumberInputControlProps> = React.forwardRef(
       showStepper = true,
       children,
       numberInputProps,
+      placeholder,
       ...rest
     } = props;
     const [field, { error, touched }] = useField(name);
@@ -45,7 +46,7 @@ export const NumberInputControl: FC<NumberInputControlProps> = React.forwardRef(
           isDisabled={isSubmitting}
           {...numberInputProps}
         >
-          <NumberInputField name={name} ref={ref} />
+          <NumberInputField name={name} ref={ref} placeholder={placeholder} />
           {showStepper && (
             <NumberInputStepper>
               <NumberIncrementStepper />
